@@ -1,5 +1,3 @@
-import { Button } from "@heroui/button";
-import Profile from "./_components/Profile";
 import CharacterList from "./_components/CharacterList";
 
 export default function Home() {
