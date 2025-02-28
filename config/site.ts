@@ -4,25 +4,29 @@ export const siteConfig = {
   name: "진예림 | 프론트엔드 개발자 포트폴리오",
   description: "프론트엔드 개발자 진예림의 포트폴리오입니다.",
   navItems: [
+    // {
+    //   label: "Home",
+    //   href: "/",
+    // },
+    // {
+    //   label: "Docs",
+    //   href: "/docs",
+    // },
+    // {
+    //   label: "Pricing",
+    //   href: "/pricing",
+    // },
+    // {
+    //   label: "Blog",
+    //   href: "/blog",
+    // },
+    // {
+    //   label: "About",
+    //   href: "/about",
+    // },
     {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
+      label: "STORE",
+      href: "/store",
     },
   ],
   navMenuItems: [

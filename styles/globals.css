@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  &.light {
+    cursor:
+      url("/images/cursor_black.svg") 2 2,
+      auto;
+    button {
+      cursor:
+        url("/images/cursor_black.svg") 2 2,
+        auto;
+    }
+    a {
+      cursor:
+        url("/images/cursor_black.svg") 2 2,
+        auto;
+    }
+  }
+  &.dark {
+    cursor:
+      url("/images/cursor_white.svg") 2 2,
+      auto;
+    button {
+      cursor:
+        url("/images/cursor_white.svg") 2 2,
+        auto;
+    }
+    a {
+      cursor:
+        url("/images/cursor_white.svg") 2 2,
+        auto;
+    }
+  }
+}
