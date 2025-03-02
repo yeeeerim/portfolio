@@ -1,4 +1,4 @@
-import CharacterList from "./_components/CharacterList";
+import CharacterList from "@/components/character-list";
 
 export default function Home() {
   return (

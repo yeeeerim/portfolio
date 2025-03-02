@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import Profile from "./Profile";
 import { Button } from "@heroui/button";
+
+import Profile from "@/components/profile";
 
 const CharacterList = () => {
   return (
@@ -12,7 +13,7 @@ const CharacterList = () => {
         <Profile />
         <Profile />
       </div>
-      <Button onPress={() => {}} color="success">
+      <Button color="success" onPress={() => {}}>
         START
       </Button>
     </div>
