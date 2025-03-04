@@ -6,7 +6,7 @@ import { FireIcon, GraphIcon, PieChartIcon, ShieldIcon } from "./icons";
 
 const CharacterInfo = () => {
   return (
-    <section className="flex-1 h-full bg-default-100/50 p-7 text-default-600 flex flex-col gap-2">
+    <section className="flex-1 h-full bg-default-100/50 p-7 border border-default-200 text-default-600 flex flex-col gap-2">
       <span className="font-black text-lg">LV. 3</span>
       <span>진예림 (JIN YERIM) / Frontend Engineer</span>
       <ul className="flex gap-2 uppercase text-tiny">
