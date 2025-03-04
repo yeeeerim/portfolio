@@ -2,6 +2,7 @@
 
 import { Progress } from "@heroui/react";
 import React from "react";
+import { FireIcon, GraphIcon, PieChartIcon, ShieldIcon } from "./icons";
 
 const CharacterInfo = () => {
   return (
@@ -9,18 +10,11 @@ const CharacterInfo = () => {
       <span className="font-black text-lg">LV. 3</span>
       <span>진예림 (JIN YERIM) / Frontend Engineer</span>
       <ul className="flex gap-2 uppercase text-tiny">
-        <li className="rounded-sm text-default-400 px-1 font-semibold bg-default-200/90">
-          React
-        </li>
-        <li className="rounded-sm text-default-400 px-1 font-semibold bg-default-200/90">
-          Next.js
-        </li>
-        <li className="rounded-sm text-default-400 px-1 font-semibold bg-default-200/90">
-          Typescript
-        </li>
-        <li className="rounded-sm text-default-400 px-1 font-semibold bg-default-200/90">
-          Tailwind
-        </li>
+        <li className="rounded-sm text-default-400 px-1 font-semibold bg-default-200/90">React</li>
+        <li className="rounded-sm text-default-400 px-1 font-semibold bg-default-200/90">Next.js</li>
+        <li className="rounded-sm text-default-400 px-1 font-semibold bg-default-200/90">Vue.js</li>
+        <li className="rounded-sm text-default-400 px-1 font-semibold bg-default-200/90">Typescript</li>
+        <li className="rounded-sm text-default-400 px-1 font-semibold bg-default-200/90">Tailwind</li>
       </ul>
       <div className="mt-4">
         <h4 className="border-b border-white/20">Skill</h4>
@@ -67,6 +61,27 @@ const CharacterInfo = () => {
             size="sm"
             value={25}
           />
+        </div>
+      </div>
+      <div className="mt-4">
+        <h4 className="border-b border-white/20">Attribute</h4>
+        <div className="grid grid-cols-4 gap-3">
+          <div className="border flex flex-col gap-1 items-center justify-center rounded-xl border-default-200/90 aspect-square">
+            <ShieldIcon width={60} height={60} />
+            <span>책임감</span>
+          </div>
+          <div className="border flex flex-col gap-1 items-center justify-center rounded-xl border-default-200/90 aspect-square">
+            <FireIcon width={60} height={60} />
+            <span>성실함</span>
+          </div>
+          <div className="border flex flex-col gap-1 items-center justify-center rounded-xl border-default-200/90 aspect-square">
+            <GraphIcon width={60} height={60} />
+            <span>성장지향형</span>
+          </div>
+          <div className="border flex gap-1 flex-col items-center justify-center rounded-xl border-default-200/90 aspect-square">
+            <PieChartIcon width={60} height={60} />
+            <span>계획형</span>
+          </div>
         </div>
       </div>
     </section>
