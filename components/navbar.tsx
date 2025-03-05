@@ -30,13 +30,13 @@ export const Navbar = () => {
                   <span
                     className="z-20"
                     style={{
-                      textShadow: active ? "0px 0px 8px rgba(240, 205, 0)" : "",
+                      textShadow: active ? "0px 0px 8px #ffe388" : "",
                     }}
                   >
                     {item.label}
                   </span>
                   {active && (
-                    <span className="blur-lg opacity-40 rounded-full bg-yellow-300 w-[40px] z-10 h-[40px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+                    <span className="blur-lg opacity-40 rounded-full bg-[#ffe388] w-[40px] z-10 h-[40px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
                   )}
                 </NextLink>
               </NavbarItem>
