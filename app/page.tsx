@@ -2,8 +2,8 @@ import GameStartComponent from "@/components/game-start-component";
 
 export default function Home() {
   return (
-    <section className="flex justify-between h-full gap-10 py-8 md:py-10">
+    <main className="flex justify-between px-6 h-full gap-10 py-24">
       <GameStartComponent />
-    </section>
+    </main>
   );
 }

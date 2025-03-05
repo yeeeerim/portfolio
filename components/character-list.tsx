@@ -5,6 +5,7 @@ import { Button } from "@heroui/button";
 
 import CharacterCard from "./character-card";
 import { characterInfo } from "@/static/character-info";
+import { useRouter } from "next/navigation";
 
 type CharacterListProps = {
   selectedCharacter: string;
@@ -12,6 +13,8 @@ type CharacterListProps = {
 };
 
 const CharacterList = ({ selectedCharacter, setSelectedCharacter }: CharacterListProps) => {
+  const router = useRouter();
+
   const characters = Object.keys(characterInfo);
 
   return (
@@ -30,7 +33,13 @@ const CharacterList = ({ selectedCharacter, setSelectedCharacter }: CharacterLis
         ))}
         <CharacterCard />
       </div>
-      <Button isDisabled={selectedCharacter !== "진예림"} color="success" onPress={() => {}}>
+      <Button
+        isDisabled={selectedCharacter !== "진예림"}
+        color="success"
+        onPress={() => {
+          router.push("/playground");
+        }}
+      >
         START
       </Button>
     </div>
