@@ -5,8 +5,24 @@ export const siteConfig = {
   description: "프론트엔드 개발자 진예림의 포트폴리오입니다.",
   navItems: [
     {
+      label: "CHARACTER",
+      href: "/character",
+    },
+    {
+      label: "QUESTS",
+      href: "/quests",
+    },
+    {
+      label: "ACHIEVEMENT",
+      href: "/achievement",
+    },
+    {
       label: "STORE",
       href: "/store",
+    },
+    {
+      label: "GAME",
+      href: "/game",
     },
   ],
   navMenuItems: [
@@ -16,10 +32,6 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/yeeeerim/portfolio",
   },
 };
