@@ -14,7 +14,7 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar className="text-default-600" maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full gap-10" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -41,7 +41,7 @@ export const Navbar = () => {
                     {item.label}
                   </span>
                   {active && (
-                    <span className="blur-lg opacity-40 rounded-full bg-[#ffe388] w-[40px] z-10 h-[40px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+                    <span className="blur-lg opacity-30 rounded-full bg-[#ffe388] w-[40px] z-10 h-[40px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
                   )}
                 </NextLink>
               </NavbarItem>
