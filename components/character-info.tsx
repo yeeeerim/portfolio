@@ -41,7 +41,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
     <section className="relative">
       {disabled && (
         <div className="absolute flex items-center justify-center top-0 left-0 w-full h-full bg-default-100/20 z-50">
-          <Icons.LockIcon width={60} height={60} />
+          <Icons.LockIcon opacity={0.6} width={60} height={60} />
         </div>
       )}
       <div
