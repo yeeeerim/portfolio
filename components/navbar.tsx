@@ -53,12 +53,12 @@ export const Navbar = () => {
       <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
         <NavbarItem className="hidden items-center sm:flex gap-3">
           <div className="flex items-center gap-1 border rounded-full px-1 py-[1px] border-default-300">
-            <CrownIcon width={20} height={20} className="mb-[2px]" />
+            <CrownIcon width={18} height={18} className="mb-[2px]" />
             <span className="font-bold">1,990</span>
             <AddCircleIcon width={20} height={20} />
           </div>
           <div className="flex items-center gap-1 border rounded-full px-1 py-[1px] border-default-300">
-            <DollarMinimalisticIcon width={20} height={20} />
+            <DollarMinimalisticIcon width={18} height={18} />
             <span className="font-bold">123,456</span>
             <AddCircleIcon width={20} height={20} />
           </div>
