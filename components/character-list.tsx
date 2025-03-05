@@ -4,32 +4,33 @@ import React from "react";
 import { Button } from "@heroui/button";
 
 import CharacterCard from "./character-card";
+import { characterInfo } from "@/static/character-info";
 
-const CharacterList = () => {
-  const [selectedCharacter, setSelectedCharacter] = React.useState("진예림");
+type CharacterListProps = {
+  selectedCharacter: string;
+  setSelectedCharacter: (character: string) => void;
+};
+
+const CharacterList = ({ selectedCharacter, setSelectedCharacter }: CharacterListProps) => {
+  const characters = Object.keys(characterInfo);
 
   return (
     <div className="flex flex-col justify-between">
       <div className="flex w-[120px] items-center flex-col gap-4">
-        <CharacterCard
-          active={selectedCharacter === "진예림"}
-          buttonText="Lv. 3"
-          description="Frontend"
-          src={"https://heroui.com/images/hero-card.jpeg"}
-          title="진예림"
-          onClick={() => setSelectedCharacter("진예림")}
-        />
-        <CharacterCard
-          active={selectedCharacter === "OOO"}
-          buttonText="Lv. 1"
-          description="Frontend"
-          src={"https://heroui.com/images/album-cover.png"}
-          title="OOO"
-          onClick={() => setSelectedCharacter("OOO")}
-        />
+        {characters.map((character, index) => (
+          <CharacterCard
+            key={`${character}-${index}`}
+            active={selectedCharacter === character}
+            buttonText={`Lv. ${characterInfo[character].level}`}
+            description={characterInfo[character].shortJob}
+            src={characterInfo[character].profile_image}
+            title={character}
+            onClick={() => setSelectedCharacter(character)}
+          />
+        ))}
         <CharacterCard />
       </div>
-      <Button color="success" onPress={() => {}}>
+      <Button isDisabled={selectedCharacter !== "진예림"} color="success" onPress={() => {}}>
         START
       </Button>
     </div>
