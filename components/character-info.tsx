@@ -87,9 +87,9 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
               const IconComponent = Icons[attr.icon as keyof typeof Icons];
 
               return (
-                <div key={attr.label} className="border flex flex-col gap-1 items-center justify-center rounded-xl border-default-200/90 aspect-square">
+                <div key={attr.label} className="border flex py-1 flex-col gap-1 items-center justify-center rounded-xl border-default-200/90 aspect-square">
                   {IconComponent && <IconComponent width={60} height={60} />}
-                  <span>{attr.label}</span>
+                  <span className="text-sm">{attr.label}</span>
                 </div>
               );
             })}
