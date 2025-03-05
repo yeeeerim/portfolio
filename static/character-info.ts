@@ -10,7 +10,8 @@ export const characterInfo: Record<string, Character> = {
     shortJob: "Frontend",
     skills: ["React", "Next.js", "Vue.js", "Typescript", "Tailwind"],
     level: 3,
-    profile_image: "https://heroui.com/images/hero-card.jpeg",
+    profile_image: "/images/profile-1.jpeg",
+    disabled: false,
     progress: [
       {
         label: "React.js",
@@ -53,7 +54,8 @@ export const characterInfo: Record<string, Character> = {
     shortJob: "Backend",
     skills: ["Node.js", "Express", "MongoDB", "GraphQL", "AWS"],
     level: 2,
-    profile_image: "https://heroui.com/images/album-cover.png",
+    profile_image: "/images/profile-2.jpeg",
+    disabled: true,
     progress: [
       {
         label: "Node.js",

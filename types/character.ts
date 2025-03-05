@@ -8,6 +8,7 @@ export type Character = {
   skills: string[];
   level: number;
   profile_image: string;
+  disabled: boolean;
   progress: {
     label: string;
     value: number;

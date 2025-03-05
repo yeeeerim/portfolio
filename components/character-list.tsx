@@ -6,10 +6,11 @@ import { Button } from "@heroui/button";
 import CharacterCard from "./character-card";
 import { characterInfo } from "@/static/character-info";
 import { useRouter } from "next/navigation";
+import { Character } from "@/types/character";
 
 type CharacterListProps = {
-  selectedCharacter: string;
-  setSelectedCharacter: (character: string) => void;
+  selectedCharacter: Character;
+  setSelectedCharacter: (character: Character) => void;
 };
 
 const CharacterList = ({ selectedCharacter, setSelectedCharacter }: CharacterListProps) => {
@@ -22,19 +23,20 @@ const CharacterList = ({ selectedCharacter, setSelectedCharacter }: CharacterLis
       <div className="flex w-[120px] items-center flex-col gap-4">
         {characters.map((character, index) => (
           <CharacterCard
-            key={`${character}-${index}`}
-            active={selectedCharacter === character}
-            buttonText={`Lv. ${characterInfo[character].level}`}
-            description={characterInfo[character].shortJob}
+            key={index}
+            active={selectedCharacter.name.ko === character}
+            level={`Lv. ${characterInfo[character].level}`}
+            name={character}
+            onClick={() => {
+              setSelectedCharacter(characterInfo[character]);
+            }}
             src={characterInfo[character].profile_image}
-            title={character}
-            onClick={() => setSelectedCharacter(character)}
           />
         ))}
         <CharacterCard />
       </div>
       <Button
-        isDisabled={selectedCharacter !== "진예림"}
+        isDisabled={selectedCharacter.disabled}
         color="success"
         onPress={() => {
           router.push("/playground");
