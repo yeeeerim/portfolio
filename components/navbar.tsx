@@ -1,3 +1,5 @@
+"use client";
+
 import { Navbar as HeroUINavbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
@@ -6,8 +8,11 @@ import NextLink from "next/link";
 import { AddCircleIcon, CrownIcon, DollarMinimalisticIcon, GithubIcon, Logo } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import { Link } from "@heroui/link";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <HeroUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full gap-10" justify="start">
@@ -19,7 +24,7 @@ export const Navbar = () => {
         </NavbarBrand>
         <ul className="hidden lg:flex gap-10 justify-start ml-2">
           {siteConfig.navItems.map((item) => {
-            const active = item.label === "CHARACTER"; // TODO: 조건 변경
+            const active = pathname === item.href;
             return (
               <NavbarItem key={item.href}>
                 <NextLink
