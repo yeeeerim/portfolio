@@ -53,7 +53,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
         <span>{`${name.ko} (${name.en}) / ${job}`}</span>
         <ul className="flex gap-2 uppercase text-tiny">
           {skills.map((skill, index) => (
-            <li key={`${skill}-${index}`} className="rounded-sm text-default-400 px-1 font-semibold bg-default-200/90">
+            <li key={`${skill}-${index}`} className="rounded-sm text-default-500 px-1 py-[1px] font-semibold bg-default-200/90">
               {skill}
             </li>
           ))}

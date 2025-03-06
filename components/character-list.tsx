@@ -36,6 +36,7 @@ const CharacterList = ({ selectedCharacter, setSelectedCharacter }: CharacterLis
         <CharacterCard />
       </div>
       <Button
+        className="font-bold text-medium"
         isDisabled={selectedCharacter.disabled}
         color="success"
         onPress={() => {
