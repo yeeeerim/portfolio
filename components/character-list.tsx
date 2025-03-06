@@ -39,7 +39,7 @@ const CharacterList = ({ selectedCharacter, setSelectedCharacter }: CharacterLis
         isDisabled={selectedCharacter.disabled}
         color="success"
         onPress={() => {
-          router.push("/playground");
+          router.push("/character");
         }}
       >
         START
