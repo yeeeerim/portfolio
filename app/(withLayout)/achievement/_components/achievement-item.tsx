@@ -32,7 +32,7 @@ const AchievementItem = ({ post }: AchievementItemProps) => {
           ))}
         </h4>
 
-        {isBlock && <LockIcon height={24} opacity={0.6} width={24} />}
+        {isBlock && <LockIcon height={24} width={24} />}
       </div>
       <p className="whitespace-pre-line text-sm text-center">
         {isBlock ? (
