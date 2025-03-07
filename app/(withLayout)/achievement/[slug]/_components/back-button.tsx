@@ -10,7 +10,10 @@ const BackButton = () => {
 
   return (
     <button
-      className={clsx(linkStyles({ color: "foreground" }), "data-[active=true]:text-primary !text-lg font-semibold")}
+      className={clsx(
+        linkStyles({ color: "foreground" }),
+        "data-[active=true]:text-primary !text-lg font-semibold",
+      )}
       onClick={() => router.back()}
     >{`< Back`}</button>
   );

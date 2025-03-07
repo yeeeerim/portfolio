@@ -13,7 +13,10 @@ type CharacterListProps = {
   setSelectedCharacter: (character: Character) => void;
 };
 
-const CharacterList = ({ selectedCharacter, setSelectedCharacter }: CharacterListProps) => {
+const CharacterList = ({
+  selectedCharacter,
+  setSelectedCharacter,
+}: CharacterListProps) => {
   const router = useRouter();
 
   const characters = Object.keys(characterInfo);

@@ -1,13 +1,24 @@
 "use client";
 
 import { Link } from "@heroui/link";
-import { Navbar as HeroUINavbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
+import {
+  Navbar as HeroUINavbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+} from "@heroui/navbar";
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 
-import { AddCircleIcon, CrownIcon, DollarMinimalisticIcon, GithubIcon, Logo } from "@/components/icons";
+import {
+  AddCircleIcon,
+  CrownIcon,
+  DollarMinimalisticIcon,
+  GithubIcon,
+  Logo,
+} from "@/components/icons";
 import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
@@ -29,7 +40,10 @@ export const Navbar = () => {
             return (
               <NavbarItem key={item.href}>
                 <NextLink
-                  className={clsx(linkStyles({ color: "foreground" }), "data-[active=true]:text-primary font-black")}
+                  className={clsx(
+                    linkStyles({ color: "foreground" }),
+                    "data-[active=true]:text-primary font-black",
+                  )}
                   color="foreground"
                   href={item.href}
                 >
@@ -51,7 +65,10 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
+      <NavbarContent
+        className="hidden sm:flex basis-1/5 sm:basis-full"
+        justify="end"
+      >
         <NavbarItem className="hidden items-center sm:flex gap-3">
           <div className="flex items-center gap-1 border rounded-full px-1 py-1 border-default-300">
             <CrownIcon className="mb-[2px]" height={18} width={18} />
@@ -63,7 +80,12 @@ export const Navbar = () => {
             <span className="font-bold text-sm">123,456</span>
             <AddCircleIcon height={20} width={20} />
           </div>
-          <Link isExternal aria-label="Github" className="bg-default-100 rounded-md p-1" href={siteConfig.links.github}>
+          <Link
+            isExternal
+            aria-label="Github"
+            className="bg-default-100 rounded-md p-1"
+            href={siteConfig.links.github}
+          >
             <GithubIcon className="text-default-500" />
           </Link>
           {/* <ThemeSwitch /> */}

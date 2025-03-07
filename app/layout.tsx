@@ -25,13 +25,24 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html suppressHydrationWarning lang="en">
       <head />
-      <body className={clsx("min-h-screen bg-background font-cinzel antialiased", fontCinzel.variable)}>
+      <body
+        className={clsx(
+          "min-h-screen bg-background font-cinzel antialiased",
+          fontCinzel.variable,
+        )}
+      >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="container relative h-screen mx-auto flex-1 max-w-7xl flex-grow">{children}</div>
+          <div className="container relative h-screen mx-auto flex-1 max-w-7xl flex-grow">
+            {children}
+          </div>
         </Providers>
       </body>
     </html>

@@ -15,7 +15,9 @@ const PostHeader = ({ title, date, coverImage, author }: PostHeaderProps) => {
     <div>
       <h4>{title}</h4>
       <p>{date}</p>
-      {coverImage && <Image alt={title} height={500} src={coverImage} width={300} />}
+      {coverImage && (
+        <Image alt={title} height={500} src={coverImage} width={300} />
+      )}
       <p>{author.name}</p>
     </div>
   );

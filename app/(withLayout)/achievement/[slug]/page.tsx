@@ -24,7 +24,12 @@ export default async function Post(props: Params) {
     <main className={fontSans.variable}>
       <BackButton />
       <article className="mt-5 flex flex-col gap-5 font-sans">
-        <PostHeader author={post.author} coverImage={post.coverImage} date={post.date} title={post.title} />
+        <PostHeader
+          author={post.author}
+          coverImage={post.coverImage}
+          date={post.date}
+          title={post.title}
+        />
         <PostBody content={content} />
       </article>
     </main>

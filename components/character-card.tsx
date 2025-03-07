@@ -12,8 +12,15 @@ interface CharacterCardProps {
   onClick?: () => void;
 }
 
-const CharacterCard = ({ src, name, level, active, onClick }: CharacterCardProps) => {
-  if (!src) return <Card className="border-none w-[100px] h-[100px]" radius="lg" />;
+const CharacterCard = ({
+  src,
+  name,
+  level,
+  active,
+  onClick,
+}: CharacterCardProps) => {
+  if (!src)
+    return <Card className="border-none w-[100px] h-[100px]" radius="lg" />;
 
   return (
     <div onClick={onClick}>
@@ -25,12 +32,19 @@ const CharacterCard = ({ src, name, level, active, onClick }: CharacterCardProps
         })}
         radius="lg"
       >
-        <Image alt="Character Image" className="object-cover aspect-square" src={src} />
+        <Image
+          alt="Character Image"
+          className="object-cover aspect-square"
+          src={src}
+        />
         <div
-          className={clsx("rounded-2xl absolute font-bold bg-black/20 z-10 px-2 py-1 text-[12px]", {
-            "right-2 top-2": active,
-            "right-1 top-1": !active,
-          })}
+          className={clsx(
+            "rounded-2xl absolute font-bold bg-black/20 z-10 px-2 py-1 text-[12px]",
+            {
+              "right-2 top-2": active,
+              "right-1 top-1": !active,
+            },
+          )}
         >
           {level}
         </div>
@@ -40,7 +54,7 @@ const CharacterCard = ({ src, name, level, active, onClick }: CharacterCardProps
             {
               "w-[calc(100%_-_16px)] bottom-2": active,
               "w-[calc(100%_-_8px)] bottom-1": !active,
-            }
+            },
           )}
         >
           <p className="flex flex-col justify-center w-full">

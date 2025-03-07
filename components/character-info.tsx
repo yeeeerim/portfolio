@@ -19,7 +19,16 @@ const colorMap: Record<string, string> = {
 };
 
 const CharacterInfo = ({ character }: CharacterInfoProps) => {
-  const { name, job, skills, level, progress, attribute, profile_image, disabled } = character;
+  const {
+    name,
+    job,
+    skills,
+    level,
+    progress,
+    attribute,
+    profile_image,
+    disabled,
+  } = character;
   const sectionRef = useRef<HTMLDivElement>(null); // blur 제거 방지
 
   // blur 제거 방지
@@ -31,7 +40,10 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
         }
       });
 
-      observer.observe(sectionRef.current, { attributes: true, attributeFilter: ["style"] });
+      observer.observe(sectionRef.current, {
+        attributes: true,
+        attributeFilter: ["style"],
+      });
 
       return () => observer.disconnect();
     }
@@ -53,7 +65,10 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
         <span>{`${name.ko} (${name.en}) / ${job}`}</span>
         <ul className="flex gap-2 uppercase text-tiny">
           {skills.map((skill, index) => (
-            <li key={`${skill}-${index}`} className="rounded-sm text-default-500 px-1 py-[1px] font-semibold bg-default-200/90">
+            <li
+              key={`${skill}-${index}`}
+              className="rounded-sm text-default-500 px-1 py-[1px] font-semibold bg-default-200/90"
+            >
               {skill}
             </li>
           ))}
@@ -87,7 +102,10 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
               const IconComponent = Icons[attr.icon as keyof typeof Icons];
 
               return (
-                <div key={attr.label} className="border flex py-1 flex-col gap-1 items-center justify-center rounded-xl border-default-200/90 aspect-square">
+                <div
+                  key={attr.label}
+                  className="border flex py-1 flex-col gap-1 items-center justify-center rounded-xl border-default-200/90 aspect-square"
+                >
                   {IconComponent && <IconComponent width={60} height={60} />}
                   <span className="text-sm">{attr.label}</span>
                 </div>
