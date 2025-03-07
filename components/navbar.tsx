@@ -83,7 +83,7 @@ export const Navbar = () => {
           <Link
             isExternal
             aria-label="Github"
-            className="bg-default-100 rounded-md p-1"
+            className="border-default-300 border rounded-full p-1"
             href={siteConfig.links.github}
           >
             <GithubIcon className="text-default-500" />
