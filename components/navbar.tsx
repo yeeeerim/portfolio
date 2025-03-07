@@ -25,7 +25,11 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <HeroUINavbar className="text-default-600" maxWidth="xl" position="sticky">
+    <HeroUINavbar
+      className="text-default-600 relative"
+      maxWidth="xl"
+      position="sticky"
+    >
       <NavbarContent className="basis-1/5 sm:basis-full gap-10" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -91,6 +95,8 @@ export const Navbar = () => {
           {/* <ThemeSwitch /> */}
         </NavbarItem>
       </NavbarContent>
+
+      <div className="absolute opacity-30 bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#ffe388] to-transparent" />
 
       {/* <NavbarContent className="sm:hidden basis-1 pl-4" justify="end"> */}
       {/* <Link isExternal aria-label="Github" href={siteConfig.links.github}>
