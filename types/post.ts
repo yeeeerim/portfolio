@@ -1,5 +1,17 @@
 import { type Author } from "./author";
 
+/**
+ * TODO: 아래와 같이 수정 필요
+ * title: string
+ * date: string
+ * banner: {
+ *  src: string
+ *  alt: string
+ *  caption?: string
+ * }
+ * slug: string
+ * reward: number
+ */
 export type Post = {
   slug: string;
   title: string;
