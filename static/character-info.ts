@@ -1,3 +1,6 @@
+import { careerData } from "./career-data";
+
+import { calculateDeveloperLevel } from "@/lib/calculateDeveloperLevel";
 import { Character } from "@/types/character";
 
 export const characterInfo: Record<string, Character> = {
@@ -9,7 +12,7 @@ export const characterInfo: Record<string, Character> = {
     job: "Frontend Engineer",
     shortJob: "Frontend",
     skills: ["React", "Next.js", "Vue.js", "Typescript", "Tailwind"],
-    level: 3,
+    level: calculateDeveloperLevel(careerData).level,
     profile_image: "/images/profile-1.jpeg",
     disabled: false,
     progress: [
@@ -53,7 +56,7 @@ export const characterInfo: Record<string, Character> = {
     job: "Backend Engineer",
     shortJob: "Backend",
     skills: ["Node.js", "Express", "MongoDB", "GraphQL", "AWS"],
-    level: 2,
+    level: 1,
     profile_image: "/images/profile-2.jpeg",
     disabled: true,
     progress: [
