@@ -18,7 +18,9 @@ const WeaponItem = ({ item, onSelect, active = false }: WeaponItemProps) => {
       className={clsx(
         "relative border flex items-center duration-200 justify-center w-[90px] aspect-square border-yellow-300/50",
         "hover:w-[86px] hover:ml-[2px] hover:mt-[2px]",
-        { "w-[86px] ml-[2px] mt-[2px] bg-default-300/40": active },
+        {
+          "w-[86px] ml-[2px] mt-[2px] bg-default-300/40 animate-pulse": active,
+        },
       )}
       onClick={() => onSelect(item)}
     >
