@@ -9,8 +9,8 @@ import {
 } from "@heroui/navbar";
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
-import NextLink from "next/link";
 import { usePathname } from "next/navigation";
+import { Button } from "@heroui/button";
 
 import {
   AddCircleIcon,
@@ -18,7 +18,6 @@ import {
   DollarMinimalisticIcon,
   GithubIcon,
   LockIcon,
-  Logo,
 } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 
@@ -33,10 +32,13 @@ export const Navbar = () => {
     >
       <NavbarContent className="basis-1/5 sm:basis-full gap-10" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+          {/* <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
             <p className="font-bold text-inherit">JIN YERIM</p>
-          </NextLink>
+          </NextLink> */}
+          <Button as="a" href="/" radius="full" variant="bordered">
+            {`< Back`}
+          </Button>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-10 justify-start ml-2">
           {siteConfig.navItems.map((item) => {
