@@ -16,13 +16,13 @@ const CharacterDetail = () => {
       <div className="w-full flex-col p-4 h-[300px] flex">
         <h3 className="text-center font-bold">JIN YERIM</h3>
         <span>Frontend</span>
-        <span className="text-3xl font-bold mb-3">{`Level ${level}`}</span>
+        <span className="text-2xl font-bold mb-3">{`Level ${level}`}</span>
         <div className="flex items-center w-full gap-3">
           <Progress
             classNames={{
               base: "flex-row items-center",
               track: "flex-1 border border-default-300",
-              indicator: "bg-[#ffd86cee]",
+              indicator: "bg-[#ffd86c7a]",
               label: "text-sm w-[30px]",
             }}
             label="EXP"
@@ -36,7 +36,7 @@ const CharacterDetail = () => {
             classNames={{
               base: "flex-row items-center",
               track: "flex-1 border border-default-300",
-              indicator: "bg-[#ff765eee]",
+              indicator: "bg-[#ff765e7a]",
               label: "text-sm w-[30px]",
             }}
             label="HP"
@@ -50,7 +50,7 @@ const CharacterDetail = () => {
             classNames={{
               base: "flex-row items-center",
               track: "flex-1 border border-default-300",
-              indicator: "bg-[#63bcffee]",
+              indicator: "bg-[#63bcff7a]",
               label: "text-sm w-[30px]",
             }}
             label="MP"
