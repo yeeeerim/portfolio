@@ -22,12 +22,7 @@ const WeaponItem = ({ item, onSelect, active = false }: WeaponItemProps) => {
       )}
       onClick={() => onSelect(item)}
     >
-      <span
-        className="absolute text-tiny font-semibold text-yellow-300 bottom-0 right-1"
-        style={{
-          textShadow: "0px 0px 2px #000000",
-        }}
-      >
+      <span className="absolute text-tiny font-semibold text-yellow-300 bottom-0 right-1">
         {item.name}
       </span>
       {item.icon}
