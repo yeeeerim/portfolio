@@ -3,9 +3,15 @@
 import { Progress } from "@heroui/react";
 import React from "react";
 
-import { Mp5Icon } from "@/components/icons";
+import { Weapon } from "@/types/weapon";
 
-const ItemDetail = () => {
+interface ItemDetailProps {
+  weaponData: Weapon;
+}
+
+const ItemDetail = ({ weaponData }: ItemDetailProps) => {
+  const { icon, name, speed, proficiency, knowledge } = weaponData;
+
   return (
     <div className="w-[280px] flex h-fit pt-[40px]">
       {/* 삼각형 */}
@@ -15,7 +21,7 @@ const ItemDetail = () => {
       {/* 내용 */}
       <div className="min-h-[550px] flex flex-col h-[550px] bg-default-100/60 w-full p-4">
         <div className="flex items-center justify-between">
-          <span className="text-2xl font-semibold">React</span>
+          <span className="text-2xl font-semibold">{name}</span>
           <span className="border rounded-full border-default-300 px-2 py-1 bg-default-100 text-tiny">
             + Equipped
           </span>
@@ -24,11 +30,13 @@ const ItemDetail = () => {
         {/* 무기 아이콘 */}
         <div className="flex gap-5 items-center">
           <div className="border mb-3 flex items-center justify-center w-[90px] aspect-square border-default-200">
-            <Mp5Icon height={60} width={60} />
+            {icon}
           </div>
           <span className="flex flex-col">
             <span>Damage</span>
-            <span className="text-3xl mb-2 font-bold">+77</span>
+            <span className="text-3xl mb-2 font-bold">
+              +{speed + proficiency + knowledge}
+            </span>
           </span>
         </div>
         {/* 속도 */}
@@ -41,7 +49,7 @@ const ItemDetail = () => {
           color="default"
           label="Speed"
           radius="none"
-          value={80}
+          value={speed}
         />
         {/* 숙련도 */}
         <Progress
@@ -53,7 +61,7 @@ const ItemDetail = () => {
           color="default"
           label="Proficiency"
           radius="none"
-          value={75}
+          value={proficiency}
         />
         {/* 지식 */}
         <Progress
@@ -65,7 +73,7 @@ const ItemDetail = () => {
           color="default"
           label="Knowledge"
           radius="none"
-          value={75}
+          value={knowledge}
         />
       </div>
     </div>
