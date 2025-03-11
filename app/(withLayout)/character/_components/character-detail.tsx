@@ -13,9 +13,9 @@ const CharacterDetail = () => {
 
   return (
     <div className="h-[600px] w-[400px] px-5 bg-default-100/60 divide-y divide-default-200/60 flex-col flex items-start justify-center">
-      <div className="w-full flex-col p-4 h-[300px] flex">
+      <div className="w-full flex-col p-4 flex">
         <h3 className="text-center font-bold">JIN YERIM</h3>
-        <span>Frontend</span>
+        <span>Frontend Engineer</span>
         <span className="text-2xl font-bold mb-3">{`Level ${level}`}</span>
         <div className="flex items-center w-full gap-3">
           <Progress
