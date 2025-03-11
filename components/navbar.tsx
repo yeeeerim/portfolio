@@ -17,6 +17,7 @@ import {
   CrownIcon,
   DollarMinimalisticIcon,
   GithubIcon,
+  LockIcon,
   Logo,
 } from "@/components/icons";
 import { siteConfig } from "@/config/site";
@@ -40,17 +41,23 @@ export const Navbar = () => {
         <ul className="hidden lg:flex gap-10 justify-start ml-2">
           {siteConfig.navItems.map((item) => {
             const active = pathname.includes(item.href);
+            const isBlock = ["STORE", "GAME"].includes(item.label);
 
             return (
               <NavbarItem key={item.href}>
-                <NextLink
+                <Link
                   className={clsx(
                     linkStyles({ color: "foreground" }),
                     "data-[active=true]:text-primary font-black",
+                    "flex items-center gap-1",
                   )}
                   color="foreground"
                   href={item.href}
+                  isDisabled={isBlock}
                 >
+                  {isBlock && (
+                    <LockIcon className="mb-[2px]" height={16} width={16} />
+                  )}
                   <span
                     className="z-20"
                     style={{
@@ -62,7 +69,7 @@ export const Navbar = () => {
                   {active && (
                     <span className="blur-lg opacity-30 rounded-full bg-[#ffe388] w-[40px] z-10 h-[40px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
                   )}
-                </NextLink>
+                </Link>
               </NavbarItem>
             );
           })}

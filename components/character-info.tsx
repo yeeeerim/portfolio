@@ -2,7 +2,9 @@
 
 import { Progress } from "@heroui/react";
 import React, { useEffect, useRef } from "react";
+
 import * as Icons from "./icons";
+
 import { Character } from "@/types/character";
 
 type CharacterInfoProps = {
@@ -53,7 +55,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
     <section className="relative">
       {disabled && (
         <div className="absolute flex items-center justify-center top-0 left-0 w-full h-full bg-default-100/20 z-50">
-          <Icons.LockIcon opacity={0.6} width={60} height={60} />
+          <Icons.LockIcon height={60} opacity={0.6} width={60} />
         </div>
       )}
       <div
@@ -106,7 +108,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
                   key={attr.label}
                   className="border flex py-1 flex-col gap-1 items-center justify-center rounded-xl border-default-200/90 aspect-square"
                 >
-                  {IconComponent && <IconComponent width={60} height={60} />}
+                  {IconComponent && <IconComponent height={60} width={60} />}
                   <span className="text-sm">{attr.label}</span>
                 </div>
               );
