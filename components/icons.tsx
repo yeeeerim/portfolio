@@ -359,7 +359,7 @@ export const Mp5Icon = (props: IconSvgProps) => (
   </svg>
 );
 
-export const DladiusIcon = (props: IconSvgProps) => (
+export const GladiusIcon = (props: IconSvgProps) => (
   <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" {...props}>
     <g transform="translate(0,0)">
       <path
