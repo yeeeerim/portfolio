@@ -1,5 +1,6 @@
-import { Mp5Icon } from "@/components/icons";
+import { DladiusIcon, Mp5Icon } from "@/components/icons";
 
 export const weaponList = [
   { icon: <Mp5Icon height={60} width={60} />, name: "React" },
+  { icon: <DladiusIcon height={60} width={60} />, name: "Next.js" },
 ];
