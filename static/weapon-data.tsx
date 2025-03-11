@@ -1,4 +1,9 @@
-import { BowIcon, GladiusIcon, Mp5Icon } from "@/components/icons";
+import {
+  BowIcon,
+  GladiusIcon,
+  Mp5Icon,
+  RevolverIcon,
+} from "@/components/icons";
 import { Weapon } from "@/types/weapon";
 
 export const weaponList: Weapon[] = [
@@ -8,6 +13,7 @@ export const weaponList: Weapon[] = [
     speed: 80,
     proficiency: 75,
     knowledge: 70,
+    experience: "3 years",
   },
   {
     icon: <GladiusIcon height={60} width={60} />,
@@ -15,12 +21,46 @@ export const weaponList: Weapon[] = [
     speed: 70,
     proficiency: 60,
     knowledge: 60,
+    experience: "3 years",
   },
   {
-    icon: <BowIcon height={50} width={50} />,
+    icon: <RevolverIcon height={60} width={60} />,
     name: "Vue.js",
     speed: 30,
     proficiency: 15,
     knowledge: 25,
+    experience: "3 months",
+  },
+  {
+    icon: <BowIcon height={50} width={50} />,
+    name: "Recoil",
+    speed: 65,
+    proficiency: 50,
+    knowledge: 50,
+    experience: "2 years",
+  },
+  {
+    icon: <></>,
+    name: "Tailwind",
+    speed: 85,
+    proficiency: 80,
+    knowledge: 70,
+    experience: "3 years",
+  },
+  {
+    icon: <></>,
+    name: "emotion",
+    speed: 70,
+    proficiency: 70,
+    knowledge: 65,
+    experience: "2 years",
+  },
+  {
+    icon: <></>,
+    name: "JS/TS",
+    speed: 70,
+    proficiency: 70,
+    knowledge: 65,
+    experience: "3 years",
   },
 ];

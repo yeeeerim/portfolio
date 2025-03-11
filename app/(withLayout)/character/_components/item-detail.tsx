@@ -10,7 +10,7 @@ interface ItemDetailProps {
 }
 
 const ItemDetail = ({ weaponData }: ItemDetailProps) => {
-  const { icon, name, speed, proficiency, knowledge } = weaponData;
+  const { icon, name, speed, proficiency, knowledge, experience } = weaponData;
 
   return (
     <div className="w-[280px] flex h-fit pt-[40px]">
@@ -75,6 +75,8 @@ const ItemDetail = ({ weaponData }: ItemDetailProps) => {
           radius="none"
           value={knowledge}
         />
+        {/* 경력 */}
+        <p className="my-3">{`Experience: ${experience}`}</p>
       </div>
     </div>
   );

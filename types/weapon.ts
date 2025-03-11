@@ -4,4 +4,5 @@ export type Weapon = {
   speed: number; // 속도
   proficiency: number; // 숙련도
   knowledge: number; // 지식
+  experience: string; // 경력
 };
