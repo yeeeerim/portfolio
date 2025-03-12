@@ -5,31 +5,31 @@
 html {
   &.light {
     cursor:
-      url("/images/cursor_black.svg") 2 2,
+      url("/images/pointer_scifi_b.svg") 4 4,
       auto;
     button {
       cursor:
-        url("/images/cursor_black.svg") 2 2,
+        url("/images/pointer_scifi_b.svg") 4 4,
         auto;
     }
     a {
       cursor:
-        url("/images/cursor_black.svg") 2 2,
+        url("/images/pointer_scifi_b.svg") 4 4,
         auto;
     }
   }
   &.dark {
     cursor:
-      url("/images/cursor_white.svg") 2 2,
+      url("/images/pointer_scifi_b.svg") 4 4,
       auto;
     button {
       cursor:
-        url("/images/cursor_white.svg") 2 2,
+        url("/images/pointer_scifi_b.svg") 4 4,
         auto;
     }
     a {
       cursor:
-        url("/images/cursor_white.svg") 2 2,
+        url("/images/pointer_scifi_b.svg") 4 4,
         auto;
     }
   }
