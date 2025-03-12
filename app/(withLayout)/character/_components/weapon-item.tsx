@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 
-import { Weapon } from "@/types/weapon";
+import { Weapon } from "@/static/weapon-data";
 
 interface WeaponItemProps {
   item: Weapon | null;

@@ -1,6 +1,6 @@
-import { CareerPeriod } from "@/types/career";
+import { CareerType } from "@/static/career-data";
 
-export function calculateDeveloperLevel(careerPeriods: CareerPeriod[]): {
+export function calculateDeveloperLevel(CareerTypes: CareerType[]): {
   level: number;
   experience: number;
 } {
@@ -8,7 +8,7 @@ export function calculateDeveloperLevel(careerPeriods: CareerPeriod[]): {
   let totalMonths = 0; // 총 경력 기간을 월 단위로 저장
 
   // 경력 기간 배열을 순회하며 총 경력 기간을 계산
-  for (const period of careerPeriods) {
+  for (const period of CareerTypes) {
     const startDate = new Date(period.startAt);
     // endAt이 빈 문자열일 경우 현재 날짜로 설정
     const endDate = period.endAt ? new Date(period.endAt) : new Date();

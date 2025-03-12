@@ -1,6 +1,6 @@
-import { CareerPeriod } from "@/types/career";
+export type CareerType = (typeof careerData)[0];
 
-export const careerData: CareerPeriod[] = [
+export const careerData = [
   {
     company_name: "TOPCO",
     team: "해외서비스개발부",

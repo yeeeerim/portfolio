@@ -2,8 +2,7 @@ import React from "react";
 
 import WeaponItem from "./weapon-item";
 
-import { weaponList } from "@/static/weapon-data";
-import { Weapon } from "@/types/weapon";
+import { Weapon, weaponList } from "@/static/weapon-data";
 
 interface WeaponsProps {
   onSelect: (weapon: Weapon) => void;

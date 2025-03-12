@@ -4,9 +4,18 @@ import {
   Mp5Icon,
   RevolverIcon,
 } from "@/components/icons";
-import { Weapon } from "@/types/weapon";
 
-export const weaponList: Weapon[] = [
+export type Weapon = (typeof weaponList)[0];
+
+/**
+ * icon: 아이콘
+ * name: 이름
+ * speed: 속도
+ * proficiency: 숙련도
+ * knowledge: 지식
+ * experience: 경력
+ */
+export const weaponList = [
   {
     icon: <Mp5Icon height={60} width={60} />,
     name: "React",

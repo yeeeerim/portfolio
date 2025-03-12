@@ -3,7 +3,7 @@
 import { Progress } from "@heroui/react";
 import React from "react";
 
-import { Weapon } from "@/types/weapon";
+import { Weapon } from "@/static/weapon-data";
 
 interface ItemDetailProps {
   weaponData: Weapon;
