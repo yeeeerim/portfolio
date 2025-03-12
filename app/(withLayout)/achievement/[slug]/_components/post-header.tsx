@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { User } from "@heroui/react";
 
 import { getCharacterInfo } from "@/lib/getCharacterinfo";
+import { Character } from "@/types/character";
 
 interface PostHeaderProps {
   title: string;
@@ -13,13 +14,22 @@ interface PostHeaderProps {
 }
 
 const PostHeader = ({ title, date, coverImage }: PostHeaderProps) => {
-  const character = getCharacterInfo();
+  const [character, setCharacter] = useState<Character>();
+
+  useEffect(() => {
+    const fetchedCharacter = getCharacterInfo();
+
+    setCharacter(fetchedCharacter);
+  }, []);
+
+  if (!character) {
+    return null;
+  }
 
   return (
     <div>
       <h4>{title}</h4>
       <p>{date}</p>
-
       <User
         avatarProps={{
           src: character.profile_image,
