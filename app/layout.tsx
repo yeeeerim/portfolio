@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontCinzel } from "@/config/fonts";
+import RouterProvider from "@/components/router-provider";
 
 export const metadata: Metadata = {
   title: {
@@ -41,6 +42,7 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="container relative h-screen mx-auto flex-1 max-w-7xl flex-grow">
+            <RouterProvider />
             {children}
           </div>
         </Providers>
