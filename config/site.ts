@@ -7,22 +7,27 @@ export const siteConfig = {
     {
       label: "CHARACTER",
       href: "/character",
+      active: true,
     },
     {
       label: "QUESTS",
       href: "/quests",
+      active: true,
     },
     {
       label: "ACHIEVEMENT",
       href: "/achievement",
+      active: true,
     },
     {
       label: "STORE",
       href: "/store",
+      active: false,
     },
     {
       label: "GAME",
       href: "/game",
+      active: false,
     },
   ],
   navMenuItems: [

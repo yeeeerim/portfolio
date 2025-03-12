@@ -43,7 +43,6 @@ export const Navbar = () => {
         <ul className="hidden lg:flex gap-10 justify-start ml-2">
           {siteConfig.navItems.map((item) => {
             const active = pathname.includes(item.href);
-            const isBlock = ["STORE", "GAME"].includes(item.label);
 
             return (
               <NavbarItem key={item.href}>
@@ -55,9 +54,9 @@ export const Navbar = () => {
                   )}
                   color="foreground"
                   href={item.href}
-                  isDisabled={isBlock}
+                  isDisabled={!item.active}
                 >
-                  {isBlock && (
+                  {!item.active && (
                     <LockIcon className="mb-[2px]" height={16} width={16} />
                   )}
                   <span
