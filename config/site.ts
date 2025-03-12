@@ -30,12 +30,12 @@ export const siteConfig = {
       active: false,
     },
   ],
-  navMenuItems: [
-    {
-      label: "Logout",
-      href: "/logout",
-    },
-  ],
+  // navMenuItems: [
+  //   {
+  //     label: "Logout",
+  //     href: "/logout",
+  //   },
+  // ],
   links: {
     github: "https://github.com/yeeeerim/portfolio",
   },
