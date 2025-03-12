@@ -67,21 +67,17 @@ const RouterProvider = () => {
   return (
     <Modal isOpen={isOpen} placement={"center"} onOpenChange={onOpenChange}>
       <ModalContent>
-        {(onClose) => (
-          <>
-            <ModalHeader className="flex flex-col gap-1">
-              {modalContent.title}
-            </ModalHeader>
-            <ModalBody>
-              <p>{modalContent.body}</p>
-            </ModalBody>
-            <ModalFooter>
-              <Button color="primary" onPress={handleClose}>
-                확인
-              </Button>
-            </ModalFooter>
-          </>
-        )}
+        <ModalHeader className="flex flex-col gap-1">
+          {modalContent.title}
+        </ModalHeader>
+        <ModalBody>
+          <p>{modalContent.body}</p>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="primary" onPress={handleClose}>
+            확인
+          </Button>
+        </ModalFooter>
       </ModalContent>
     </Modal>
   );
