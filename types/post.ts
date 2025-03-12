@@ -1,5 +1,3 @@
-import { type Author } from "./author";
-
 /**
  * TODO: 아래와 같이 수정 필요
  * title: string
@@ -17,7 +15,6 @@ export type Post = {
   title: string;
   date: string;
   coverImage?: string;
-  author: Author;
   excerpt: string;
   ogImage: {
     url: string;

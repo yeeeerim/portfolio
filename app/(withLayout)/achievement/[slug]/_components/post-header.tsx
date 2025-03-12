@@ -1,24 +1,36 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { User } from "@heroui/react";
 
-import { Author } from "@/types/author";
+import { getCharacterInfo } from "@/lib/getCharacterinfo";
 
 interface PostHeaderProps {
   title: string;
   date: string;
   coverImage?: string;
-  author: Author;
 }
 
-const PostHeader = ({ title, date, coverImage, author }: PostHeaderProps) => {
+const PostHeader = ({ title, date, coverImage }: PostHeaderProps) => {
+  const character = getCharacterInfo();
+
   return (
     <div>
       <h4>{title}</h4>
       <p>{date}</p>
+
+      <User
+        avatarProps={{
+          src: character.profile_image,
+        }}
+        className="bg-default-100 p-3"
+        description={character.job}
+        name={`${character.name.ko} (${character.name.en})`}
+      />
       {coverImage && (
         <Image alt={title} height={500} src={coverImage} width={300} />
       )}
-      <p>{author.name}</p>
     </div>
   );
 };

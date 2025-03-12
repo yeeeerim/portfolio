@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import clsx from "clsx";
 
 import PostHeader from "./_components/post-header";
 import PostBody from "./_components/post-body";
@@ -21,11 +22,10 @@ export default async function Post(props: Params) {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <main className={fontSans.variable}>
+    <main className={clsx(fontSans.variable, "max-w-[960px] mx-auto px-5")}>
       <BackButton />
       <article className="mt-5 flex flex-col gap-5 font-sans">
         <PostHeader
-          author={post.author}
           coverImage={post.coverImage}
           date={post.date}
           title={post.title}
