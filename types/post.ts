@@ -21,4 +21,8 @@ export type Post = {
   };
   content: string;
   preview?: boolean;
+  reward: {
+    exp: number;
+    crown: number;
+  };
 };
