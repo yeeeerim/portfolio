@@ -1,8 +1,11 @@
 import {
   BowIcon,
+  FairyWandIcon,
   GladiusIcon,
+  LeeEnfieldIcon,
   Mp5Icon,
   RevolverIcon,
+  ThorHammerIcon,
 } from "@/components/icons";
 
 export type Weapon = (typeof weaponList)[0];
@@ -41,7 +44,7 @@ export const weaponList = [
     experience: "3 months",
   },
   {
-    icon: <BowIcon height={50} width={50} />,
+    icon: <LeeEnfieldIcon height={60} width={60} />,
     name: "Recoil",
     speed: 65,
     proficiency: 50,
@@ -49,7 +52,7 @@ export const weaponList = [
     experience: "2 years",
   },
   {
-    icon: <></>,
+    icon: <BowIcon height={50} width={50} />,
     name: "Tailwind",
     speed: 85,
     proficiency: 80,
@@ -57,7 +60,7 @@ export const weaponList = [
     experience: "3 years",
   },
   {
-    icon: <></>,
+    icon: <FairyWandIcon height={48} width={48} />,
     name: "emotion",
     speed: 70,
     proficiency: 70,
@@ -65,7 +68,7 @@ export const weaponList = [
     experience: "2 years",
   },
   {
-    icon: <></>,
+    icon: <ThorHammerIcon height={60} width={60} />,
     name: "JS/TS",
     speed: 70,
     proficiency: 70,
