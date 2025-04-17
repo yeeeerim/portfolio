@@ -16,15 +16,20 @@ const WeaponItem = ({ item, onSelect, active = false }: WeaponItemProps) => {
   return (
     <button
       className={clsx(
-        "relative border flex items-center duration-200 justify-center w-[90px] aspect-square border-yellow-300/50",
-        "hover:w-[86px] hover:ml-[2px] hover:mt-[2px]",
+        "relative border flex items-center duration-200 justify-center w-[90px] aspect-square border-yellow-100/30",
         {
-          "w-[86px] ml-[2px] mt-[2px] bg-default-300/40 animate-pulse": active,
+          "hover:w-[86px] hover:ml-[2px] hover:mt-[2px]": !active,
+        },
+        {
+          "w-[86px] bg-default-300/40 animate-pulse": active,
         },
       )}
       onClick={() => onSelect(item)}
     >
-      <span className="absolute text-tiny font-semibold text-yellow-300 bottom-0 right-1">
+      <span className="absolute text-tiny font-semibold text-yellow-100 top-1 left-1">
+        {item.speed + item.proficiency + item.knowledge}
+      </span>
+      <span className="absolute text-tiny font-semibold text-yellow-200 bottom-0 right-1">
         {item.name}
       </span>
       {item.icon}
