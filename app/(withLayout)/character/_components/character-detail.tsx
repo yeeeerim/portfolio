@@ -60,10 +60,18 @@ const CharacterDetail = () => {
           <span className="w-[50px]">100</span>
         </div>
       </div>
-      <div className="w-full text-center flex-1 flex items-center justify-center">
+      <div className="w-full p-4 flex-1 grid grid-cols-2 justify-center">
         {/* Character Feature 1 */}
+        <span>Birthday</span>
+        <span>1999.06.09</span>
+        <span>MBTI</span>
+        <span>ISFJ</span>
+        <span>Major</span>
+        <span>Computer Engineering</span>
+        <span>Favorite Skills</span>
+        <span>TypeScript, React.js, Next.js, Tailwind</span>
       </div>
-      <div className="w-full text-center flex-1 flex items-center justify-center">
+      <div className="w-full p-4 flex-col flex-1 flex justify-center">
         {/* Character Feature 2 */}
       </div>
     </div>
