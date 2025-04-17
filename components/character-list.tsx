@@ -41,7 +41,7 @@ const CharacterList = ({
             active={selectedCharacter.name.ko === character}
             level={`Lv. ${characterInfo[character].level}`}
             name={character}
-            src={characterInfo[character].profile_image}
+            src={characterInfo[character].profile_image_url}
             onClick={() => {
               setSelectedCharacter(characterInfo[character]);
             }}

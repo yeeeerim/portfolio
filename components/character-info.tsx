@@ -28,7 +28,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
     level,
     progress,
     attribute,
-    profile_image,
+    profile_image_url: profile_image,
     disabled,
   } = character;
   const sectionRef = useRef<HTMLDivElement>(null); // blur 제거 방지

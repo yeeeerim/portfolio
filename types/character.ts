@@ -7,7 +7,8 @@ export type Character = {
   shortJob: string;
   skills: string[];
   level: number;
-  profile_image: string;
+  profile_image_url: string;
+  image_url: string;
   disabled: boolean;
   progress: {
     label: string;

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+
 import CharacterInfo from "@/components/character-info";
 import CharacterList from "@/components/character-list";
 import { characterInfo } from "@/static/character-info";
@@ -17,7 +18,12 @@ const GameStartComponent = () => {
         selectedCharacter={selectedCharacter}
         setSelectedCharacter={setSelectedCharacter}
       />
-      <div className="flex-1 h-full border border-default-100" />
+      <div
+        className="flex-1 flex items-center justify-center h-full bg-contain bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${selectedCharacter.image_url})`,
+        }}
+      />
       <CharacterInfo character={selectedCharacter} />
     </>
   );

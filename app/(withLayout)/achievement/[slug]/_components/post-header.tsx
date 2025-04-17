@@ -32,7 +32,7 @@ const PostHeader = ({ title, date, coverImage }: PostHeaderProps) => {
       <p>{date}</p>
       <User
         avatarProps={{
-          src: character.profile_image,
+          src: character.profile_image_url,
         }}
         className="bg-default-100 p-3"
         description={character.job}
