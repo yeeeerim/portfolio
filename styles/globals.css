@@ -133,6 +133,7 @@ article {
     padding: 0.5rem;
     border-radius: 0.25rem;
     margin-bottom: 1rem;
+    border: 1px solid #ffffff10;
   }
 
   h1,
@@ -142,5 +143,14 @@ article {
   h5,
   h6 {
     margin-top: 2rem;
+  }
+
+  a {
+    color: #8ac2ff;
+    text-decoration: underline;
+    &:hover {
+      color: #8ac2ff;
+      text-decoration: none;
+    }
   }
 }
