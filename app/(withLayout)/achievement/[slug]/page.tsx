@@ -22,9 +22,11 @@ export default async function Post(props: Params) {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <main className={clsx(fontSans.variable, "max-w-[960px] mx-auto px-5")}>
+    <main
+      className={clsx(fontSans.variable, "max-w-[960px] mx-auto px-5 mb-20")}
+    >
       <BackButton />
-      <article className="mt-5 flex flex-col gap-5 font-sans">
+      <article className="mt-5 flex flex-col gap-5 font-sans bg-default-100/50 p-5 rounded-lg">
         <PostHeader
           coverImage={post.coverImage}
           date={post.date}

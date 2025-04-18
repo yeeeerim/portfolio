@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { User } from "@heroui/react";
+import { useEffect, useState } from "react";
 
 import { getCharacterInfo } from "@/lib/getCharacterinfo";
 import { Character } from "@/types/character";
+import { CrossSwordsIcon } from "@/components/icons";
 
 interface PostHeaderProps {
   title: string;
@@ -27,20 +26,9 @@ const PostHeader = ({ title, date, coverImage }: PostHeaderProps) => {
   }
 
   return (
-    <div>
-      <h4>{title}</h4>
-      <p>{date}</p>
-      <User
-        avatarProps={{
-          src: character.profile_image_url,
-        }}
-        className="bg-default-100 p-3"
-        description={character.job}
-        name={`${character.name.ko} (${character.name.en})`}
-      />
-      {coverImage && (
-        <Image alt={title} height={500} src={coverImage} width={300} />
-      )}
+    <div className="flex gap-1 flex-col">
+      <CrossSwordsIcon className="w-5 h-5" /> <h4>{title} 회고</h4>
+      <p className="text-sm text-default-500">{date}</p>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const BackButton = () => {
         linkStyles({ color: "foreground" }),
         "data-[active=true]:text-primary !text-lg font-semibold",
       )}
-      onClick={() => router.back()}
+      onClick={() => router.push("/achievement")}
     >{`< Back`}</button>
   );
 };
