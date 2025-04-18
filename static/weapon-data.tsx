@@ -1,4 +1,5 @@
 import {
+  BatteredAxeIcon,
   BowIcon,
   FairyWandIcon,
   GladiusIcon,
@@ -52,7 +53,7 @@ export const weaponList = [
     experience: "2 years",
   },
   {
-    icon: <BowIcon height={50} width={50} />,
+    icon: <BowIcon height={48} width={48} />,
     name: "Tailwind",
     speed: 85,
     proficiency: 80,
@@ -74,5 +75,13 @@ export const weaponList = [
     proficiency: 70,
     knowledge: 65,
     experience: "3 years",
+  },
+  {
+    icon: <BatteredAxeIcon height={52} width={52} />,
+    name: "SWR",
+    speed: 60,
+    proficiency: 60,
+    knowledge: 65,
+    experience: "2 years",
   },
 ];
