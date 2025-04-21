@@ -454,3 +454,15 @@ export const CrossSwordsIcon = (props: IconSvgProps) => (
     </g>
   </svg>
 );
+
+export const UserRoundedIcon = (props: IconSvgProps) => (
+  <svg
+    fill="none"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <circle cx="12" cy="6" fill="#fff" r="4" />
+    <ellipse cx="12" cy="17" fill="#fff" rx="7" ry="4" />
+  </svg>
+);
