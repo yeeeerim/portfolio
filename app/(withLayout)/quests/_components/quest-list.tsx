@@ -17,7 +17,7 @@ const QuestList = ({ allQuests }: QuestListProps) => {
 
   return (
     <Accordion
-      className="w-[400px]"
+      className="w-[300px]"
       defaultExpandedKeys={["1", "2"]}
       selectionMode="multiple"
       variant="splitted"
