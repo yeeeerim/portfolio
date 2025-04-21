@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Accordion, AccordionItem } from "@heroui/react";
+import { usePathname } from "next/navigation";
 
 import QuestItem from "./quest-item";
 
@@ -12,6 +13,9 @@ interface QuestListProps {
 }
 
 const QuestList = ({ allQuests }: QuestListProps) => {
+  const pathname = usePathname();
+  const slug = pathname.split("/").pop();
+
   const completedQuests = allQuests.filter((quest) => quest.date.endAt);
   const inProgressQuests = allQuests.filter((quest) => !quest.date.endAt);
 
@@ -41,7 +45,7 @@ const QuestList = ({ allQuests }: QuestListProps) => {
               key={quest.slug}
               className="border-t border-default-100 w-full h-fit py-1"
             >
-              <QuestItem quest={quest} />
+              <QuestItem isActive={slug === quest.slug} quest={quest} />
             </div>
           ))}
         </div>
@@ -65,7 +69,7 @@ const QuestList = ({ allQuests }: QuestListProps) => {
               key={quest.slug}
               className="border-t border-default-100 w-full h-fit py-1"
             >
-              <QuestItem quest={quest} />
+              <QuestItem isActive={slug === quest.slug} quest={quest} />
             </div>
           ))}
         </div>

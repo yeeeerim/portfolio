@@ -1,17 +1,22 @@
 import React from "react";
 import Link from "next/link";
+import clsx from "clsx";
 
 import { Quest } from "@/types/quest";
 import { UserRoundedIcon } from "@/components/icons";
 
 interface QuestItemProps {
   quest: Quest;
+  isActive: boolean;
 }
 
-const QuestItem = ({ quest }: QuestItemProps) => {
+const QuestItem = ({ quest, isActive }: QuestItemProps) => {
   return (
     <Link
-      className="px-3 py-2 flex hover:bg-default-100 rounded-lg gap-2"
+      className={clsx(
+        "px-3 py-2 flex hover:bg-default-100 rounded-lg gap-2",
+        isActive && "bg-default-100",
+      )}
       href={`/quests/${quest.slug}`}
     >
       <div>{quest.title}</div>
