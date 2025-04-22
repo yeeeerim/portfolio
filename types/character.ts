@@ -17,5 +17,6 @@ export type Character = {
   attribute: {
     icon: string;
     label: string;
+    description: string;
   }[];
 };

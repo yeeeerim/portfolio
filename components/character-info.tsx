@@ -1,7 +1,7 @@
 "use client";
 
 import { Progress } from "@heroui/react";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import * as Icons from "./icons";
 
@@ -32,6 +32,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
     disabled,
   } = character;
   const sectionRef = useRef<HTMLDivElement>(null); // blur 제거 방지
+  const [selectedAttribute, setSelectedAttribute] = useState(attribute[0]);
 
   // blur 제거 방지
   useEffect(() => {
@@ -52,7 +53,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
   }, [disabled]);
 
   return (
-    <section className="relative">
+    <section className="relative w-[500px]">
       {disabled && (
         <div className="absolute flex items-center justify-center top-0 left-0 w-full h-full bg-default-100/20 z-50">
           <Icons.LockIcon height={60} opacity={0.6} width={60} />
@@ -76,7 +77,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
           ))}
         </ul>
         <div className="mt-4">
-          <h4 className="border-b border-white/20">Skill</h4>
+          <h3 className="border-b border-white/20">Skill</h3>
           <div className="flex flex-col gap-2 w-full">
             {progress.map((skill, index) => (
               <Progress
@@ -97,22 +98,30 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
             ))}
           </div>
         </div>
-        <div className="mt-4">
-          <h4 className="border-b border-white/20">Attribute</h4>
+        <div className="mt-4 flex-1 flex flex-col">
+          <h3 className="border-b border-white/20">Attribute</h3>
           <div className="grid grid-cols-4 gap-3">
             {attribute.map((attr) => {
               const IconComponent = Icons[attr.icon as keyof typeof Icons];
 
               return (
-                <div
+                <button
                   key={attr.label}
-                  className="border flex py-1 flex-col gap-1 items-center justify-center rounded-xl border-default-200/90 aspect-square"
+                  className="border flex py-1 flex-col gap-1 items-center justify-center rounded-xl border-default-200/90 aspect-square hover:bg-default-200/50"
+                  onClick={() => setSelectedAttribute(attr)}
                 >
                   {IconComponent && <IconComponent height={60} width={60} />}
                   <span className="text-sm">{attr.label}</span>
-                </div>
+                </button>
               );
             })}
+          </div>
+          <div className="border border-default-200/90 p-4 rounded-xl flex-1 mt-4">
+            <h4 className="font-bold">{selectedAttribute.label}</h4>
+            <hr className="border-default-200/90 mb-4 -mt-1" />
+            <p className="text-default-500 text-sm">
+              {selectedAttribute.description}
+            </p>
           </div>
         </div>
       </div>
