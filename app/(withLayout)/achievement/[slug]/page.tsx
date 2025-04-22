@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import clsx from "clsx";
 
 import PostHeader from "./_components/post-header";
 import PostBody from "./_components/post-body";
@@ -9,7 +8,6 @@ import BackButton from "./_components/back-button";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -22,9 +20,7 @@ export default async function Post(props: Params) {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <main
-      className={clsx(fontSans.variable, "max-w-[960px] mx-auto px-5 mb-20")}
-    >
+    <main className="max-w-[960px] mx-auto px-5 mb-20 font-sans">
       <BackButton />
       <article className="mt-5 flex flex-col gap-5 font-sans bg-default-100/50 p-5 rounded-lg">
         <PostHeader

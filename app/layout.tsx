@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
-import { fontCinzel } from "@/config/fonts";
+import { fontCinzel, fontSans } from "@/config/fonts";
 import RouterProvider from "@/components/router-provider";
 
 export const metadata: Metadata = {
@@ -38,6 +38,7 @@ export default function RootLayout({
         className={clsx(
           "min-h-screen bg-background font-cinzel antialiased",
           fontCinzel.variable,
+          fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
