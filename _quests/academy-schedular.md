@@ -2,6 +2,7 @@
 title: "학원 스케줄러"
 date:
   startAt: "2024. 09. 28"
+  endAt: "2024. 12. 30"
 skills:
   - TypeScript
   - React.js
