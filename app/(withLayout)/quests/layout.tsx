@@ -17,7 +17,7 @@ const QuestLayout = ({ children }: { children: React.ReactNode }) => {
       )}
     >
       <QuestList allQuests={allQuests} />
-      <article className="px-4 flex-1 bg-content1 shadow-medium rounded-medium flex flex-col gap-5 font-sans">
+      <article className="px-8 pb-4 flex-1 bg-content1 shadow-medium rounded-medium flex flex-col gap-5 font-sans">
         {children}
       </article>
     </main>

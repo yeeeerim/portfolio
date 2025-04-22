@@ -1,5 +1,12 @@
 import React from "react";
 
+import {
+  CalendarIcon,
+  CodeSquareIcon,
+  CrossSwordsIcon,
+  UserRoundedIcon,
+} from "@/components/icons";
+
 interface QuestHeaderProps {
   date: {
     startAt: string;
@@ -11,6 +18,7 @@ interface QuestHeaderProps {
   description: string;
   url: {
     external: string;
+    github: string;
   };
 }
 
@@ -24,18 +32,39 @@ const QuestHeader = ({
 }: QuestHeaderProps) => {
   return (
     <div className="flex flex-col gap-2">
-      <h1>{title}</h1>
-      <p>
-        {date.startAt} ~ {date.endAt ?? "진행중"}
-      </p>
-      <p>{description}</p>
-      <p>{skills.join(", ")}</p>
-      <p>파티원 : {contributors}명</p>
-      <p>
-        <a href={url.external} rel="noopener noreferrer" target="_blank">
-          {url.external}
-        </a>
-      </p>
+      <h1 className="text-2xl flex items-center gap-2 font-bold">
+        {title} <CrossSwordsIcon className="w-5 h-5" />
+      </h1>
+      <div className="border border-default-100 flex-col p-4 text-sm w-full flex items-start gap-2">
+        <p className="m-0">{description}</p>
+        <hr className="w-full my-2" />
+        <span className="flex items-center gap-2">
+          <CalendarIcon className="w-4 h-4" />
+          <span>
+            {date.startAt} - {date.endAt ?? "진행중"}
+          </span>
+        </span>
+        <span className="flex items-center gap-2">
+          <UserRoundedIcon className="w-4 h-4" />
+          파티원 : {contributors}명
+        </span>
+        <span className="flex items-center gap-2">
+          <CodeSquareIcon className="w-4 h-4" />
+          {skills.map((skill) => (
+            <code key={skill}>{skill}</code>
+          ))}
+        </span>
+        {url.external && (
+          <a href={url.external} rel="noopener noreferrer" target="_blank">
+            {url.external}
+          </a>
+        )}
+        {url.github && (
+          <a href={url.github} rel="noopener noreferrer" target="_blank">
+            {url.github}
+          </a>
+        )}
+      </div>
     </div>
   );
 };
