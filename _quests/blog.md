@@ -1,8 +1,8 @@
 ---
 title: "포트폴리오 사이트"
 date:
-  startAt: "2024. 01"
-  endAt: "2024. 05"
+  startAt: "2022. 10. 29"
+  endAt: "2024. 05. 29"
 skills:
   - TypeScript
   - React.js
