@@ -2,9 +2,11 @@
 
 import { Progress } from "@heroui/react";
 import React from "react";
+import Link from "next/link";
 
 import { calculateDeveloperLevel } from "@/lib/calculateDeveloperLevel";
 import { careerData } from "@/static/career-data";
+import { GithubIcon, LetterIcon, PenIcon } from "@/components/icons";
 
 const CharacterDetail = () => {
   // 결과 계산
@@ -71,8 +73,34 @@ const CharacterDetail = () => {
         <span>Favorite Skills</span>
         <span>TypeScript, React.js, Next.js, Tailwind</span>
       </div>
-      <div className="w-full p-4 flex-col flex-1 flex justify-center">
+      <div className="w-full p-4 flex-1 ">
         {/* Character Feature 2 */}
+        <div className="flex items-center gap-3">
+          <Link
+            aria-label="GitHub"
+            className="bg-default-100 border border-default-200 rounded-md p-2 w-fit"
+            href="https://github.com/yeeeerim"
+            target="_blank"
+          >
+            <GithubIcon />
+          </Link>
+          <Link
+            aria-label="email"
+            className="bg-default-100 border border-default-200 rounded-md p-2 w-fit"
+            href="mailto:yerim609@gmail.com"
+            target="_blank"
+          >
+            <LetterIcon />
+          </Link>
+          <Link
+            aria-label="blog"
+            className="bg-default-100 border border-default-200 rounded-md p-2 w-fit"
+            href="https://velog.io/@yr1m/posts"
+            target="_blank"
+          >
+            <PenIcon />
+          </Link>
+        </div>
       </div>
     </div>
   );
