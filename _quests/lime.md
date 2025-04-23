@@ -14,12 +14,12 @@ contributors: 6
 url:
   github: https://github.com/uju-in/lime-frontend
 banners:
-  - /banners/lime/1.png
-  - /banners/lime/2.png
-  - /banners/lime/3.png
-  - /banners/lime/4.png
-  - /banners/lime/5.png
-  - /banners/lime/6.png
+  - /assets/lime/banner/1.png
+  - /assets/lime/banner/2.png
+  - /assets/lime/banner/3.png
+  - /assets/lime/banner/4.png
+  - /assets/lime/banner/5.png
+  - /assets/lime/banner/6.png
 ---
 
 ## 1. 프로젝트 개요

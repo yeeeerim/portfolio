@@ -12,10 +12,10 @@ contributors: 6
 url:
   github: https://github.com/TeamDogeC-2/StudentSoup
 banners:
-  - /banners/sfoo/1.png
-  - /banners/sfoo/2.png
-  - /banners/sfoo/3.png
-  - /banners/sfoo/4.png
+  - /assets/sfoo/banner/1.png
+  - /assets/sfoo/banner/2.png
+  - /assets/sfoo/banner/3.png
+  - /assets/sfoo/banner/4.png
 ---
 
 ## 1. 프로젝트 개요
