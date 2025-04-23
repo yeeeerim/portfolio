@@ -12,7 +12,7 @@ const BackButton = () => {
     <button
       className={clsx(
         linkStyles({ color: "foreground" }),
-        "data-[active=true]:text-primary !text-lg font-semibold",
+        "data-[active=true]:text-primary text-white/60 !text-lg font-semibold",
       )}
       onClick={() => router.push("/achievement")}
     >{`< Back`}</button>

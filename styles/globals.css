@@ -96,25 +96,15 @@ article {
   line-height: 1.75rem;
 
   blockquote {
-    background-color: #27272a;
+    background-color: #ffffff1e;
     padding: 1rem;
-    border-left: 4px solid #d8cca7;
+    border-left: 4px solid #ffffff68;
     margin: 1rem 0;
-    border-radius: 0.25rem;
-  }
-
-  code {
-    background-color: #27272a;
-    padding: 0.125rem 0.25rem;
-    border-radius: 0.25rem;
-    color: #d8cca7;
-    font-size: 0.75rem;
-    font-weight: 700;
   }
 
   hr {
     margin: 2rem 0;
-    border-color: #27272a;
+    border-color: #ffffff1e;
   }
   ol {
     list-style-type: decimal;
@@ -129,11 +119,57 @@ article {
   }
 
   img {
-    background-color: #27272a;
+    background-color: #ffffff1e;
     padding: 0.5rem;
     border-radius: 0.25rem;
     margin-bottom: 1rem;
     border: 1px solid #ffffff10;
+  }
+
+  pre {
+    background-color: #ffffff1e;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ffffff10;
+  }
+
+  code {
+    background-color: #ffffff1e;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    color: #dac179;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  pre > code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid #ffffff49;
+    border-radius: 0.25rem;
+    margin: 1.5rem 0;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid #ffffff49;
+  }
+
+  th {
+    background-color: #ffffff1e;
   }
 
   h1,

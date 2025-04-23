@@ -20,16 +20,24 @@ const CharacterCard = ({
   onClick,
 }: CharacterCardProps) => {
   if (!src)
-    return <Card className="border-none w-[100px] h-[100px]" radius="lg" />;
+    return (
+      <Card
+        className="border-none bg-white/20 w-[100px] h-[100px]"
+        radius="lg"
+      />
+    );
 
   return (
-    <div onClick={onClick}>
+    <button onClick={onClick}>
       <Card
         isFooterBlurred
-        className={clsx("text-white/80 w-[100px] h-[100px] relative", {
-          "border-2 p-1 border-white/50 rounded-2xl": active,
-          "border-none": !active,
-        })}
+        className={clsx(
+          "text-white/80 w-[100px] h-[100px] bg-white/10 relative",
+          {
+            "border-2 p-1 border-white/50 rounded-2xl": active,
+            "border-none": !active,
+          },
+        )}
         radius="lg"
       >
         <Image
@@ -39,7 +47,7 @@ const CharacterCard = ({
         />
         <div
           className={clsx(
-            "rounded-2xl absolute font-bold bg-black/20 z-10 px-2 py-1 text-[12px]",
+            "rounded-2xl absolute font-bold bg-black/50 z-10 px-2 py-1 text-[12px]",
             {
               "right-2 top-2": active,
               "right-1 top-1": !active,
@@ -62,7 +70,7 @@ const CharacterCard = ({
           </p>
         </CardFooter>
       </Card>
-    </div>
+    </button>
   );
 };
 

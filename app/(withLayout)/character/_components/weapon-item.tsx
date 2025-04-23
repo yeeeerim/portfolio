@@ -11,22 +11,24 @@ interface WeaponItemProps {
 
 const WeaponItem = ({ item, onSelect, active = false }: WeaponItemProps) => {
   if (!item)
-    return <div className="border w-[90px] aspect-square border-default-200" />;
+    return (
+      <div className="border w-[90px] aspect-square border-white/20 bg-black/5" />
+    );
 
   return (
     <button
       className={clsx(
-        "relative border flex items-center duration-200 justify-center w-[90px] aspect-square border-yellow-100/30",
+        "relative border flex items-center duration-200 justify-center w-[90px] aspect-square border-white/60 bg-black/5",
         {
           "hover:w-[86px] hover:ml-[2px] hover:mt-[2px]": !active,
         },
         {
-          "w-[86px] bg-default-300/40 animate-pulse": active,
+          "w-[86px] bg-white/10 animate-pulse border-yellow-200/60": active,
         },
       )}
       onClick={() => onSelect(item)}
     >
-      <span className="absolute text-tiny font-semibold text-yellow-100 top-1 left-1">
+      <span className="absolute text-tiny font-semibold text-yellow-200 top-1 left-1">
         {item.speed + item.proficiency + item.knowledge}
       </span>
       <span className="absolute text-tiny font-semibold text-yellow-200 bottom-0 right-1">

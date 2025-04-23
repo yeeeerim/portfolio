@@ -16,7 +16,7 @@ const AchievementItem = ({ post }: AchievementItemProps) => {
     <Link
       key={post.slug}
       className={clsx(
-        "transition-transform border shadow-card p-3 h-[400px] duration-300 justify-center gap-4 border-default-200 items-center rounded-lg flex w-[200px]",
+        "transition-transform border border-white/20 text-white font-bold shadow-card p-3 h-[400px] duration-300 justify-center gap-4 items-center rounded-lg flex w-[200px]",
         "hover:shadow-card-hover hover:transform hover:translate-y-7",
       )}
       color="foreground"
@@ -24,7 +24,7 @@ const AchievementItem = ({ post }: AchievementItemProps) => {
       isDisabled={isBlock}
     >
       <div className="flex flex-col items-center">
-        <h4 className="whitespace-pre-line text-center">
+        <h4 className="whitespace-pre-line text-lg text-center">
           {post.title.split("").map((char, index) => (
             <span key={index} className="block min-h-2">
               {char}

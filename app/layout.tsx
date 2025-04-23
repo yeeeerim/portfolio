@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/images/my-notion-face-transparent 1.png",
+    icon: "/images/my-notion-face-transparent.png",
   },
 };
 
@@ -36,13 +36,19 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-cinzel antialiased",
+          "min-h-screen font-cinzel antialiased",
           fontCinzel.variable,
           fontSans.variable,
         )}
+        style={{
+          background: "url('/images/background-img.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="container relative h-screen mx-auto flex-1 max-w-7xl flex-grow">
+          <div className="relative flex-1 flex-grow">
             <RouterProvider />
             {children}
           </div>

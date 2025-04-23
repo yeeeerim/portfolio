@@ -5,10 +5,10 @@ import WeaponComponent from "./_components/weapon-component";
 
 const page = () => {
   return (
-    <div className="h-full items-start flex gap-5">
+    <div className="h-full items-center flex gap-5">
       <WeaponComponent />
       <div
-        className="h-full flex-1 flex items-center justify-center bg-cover bg-center bg-no-repeat"
+        className="flex-1 flex items-center justify-center bg-cover h-[632px] bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(/images/img_yerim.png)`,
         }}

@@ -5,7 +5,9 @@ interface QuestBodyProps {
 }
 
 const QuestBody = ({ content }: QuestBodyProps) => {
-  return <div dangerouslySetInnerHTML={{ __html: content }} />;
+  return (
+    <div dangerouslySetInnerHTML={{ __html: content }} className="text-white" />
+  );
 };
 
 export default QuestBody;

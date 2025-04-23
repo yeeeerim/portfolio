@@ -31,11 +31,11 @@ const QuestHeader = ({
   url,
 }: QuestHeaderProps) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 text-white">
       <h1 className="text-2xl flex items-center gap-2 font-bold">
         {title} <CrossSwordsIcon className="w-5 h-5" />
       </h1>
-      <div className="border border-default-100 flex-col p-4 text-sm w-full flex items-start gap-2">
+      <div className="border border-white/20 flex-col p-4 text-sm w-full flex items-start gap-2">
         <p className="m-0">{description}</p>
         <hr className="w-full my-2" />
         <span className="flex items-center gap-2">

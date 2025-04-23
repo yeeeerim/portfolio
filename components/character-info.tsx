@@ -55,13 +55,13 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
   return (
     <section className="relative w-[500px]">
       {disabled && (
-        <div className="absolute flex items-center justify-center top-0 left-0 w-full h-full bg-default-100/20 z-50">
+        <div className="absolute flex items-center justify-center top-0 left-0 w-full h-full bg-white/10 z-50">
           <Icons.LockIcon height={60} opacity={0.6} width={60} />
         </div>
       )}
       <div
         ref={sectionRef}
-        className="relative flex-1 h-full bg-default-100/50 p-7 border border-default-200 text-default-600 flex flex-col gap-2"
+        className="relative flex-1 h-full bg-white/10 p-7 border border-white/20 text-white flex flex-col gap-2"
         style={disabled ? { filter: "blur(5px)" } : {}}
       >
         <span className="font-black text-lg">{`LV. ${level}`}</span>
@@ -70,7 +70,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
           {skills.map((skill, index) => (
             <li
               key={`${skill}-${index}`}
-              className="rounded-sm text-default-500 px-1 py-[1px] font-semibold bg-default-200/90"
+              className="rounded-sm text-white/50 px-1 py-[1px] font-semibold bg-white/10"
             >
               {skill}
             </li>
@@ -83,10 +83,10 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
               <Progress
                 key={skill.label}
                 classNames={{
-                  track: "drop-shadow-md border border-default",
+                  track: "drop-shadow-md border border-white/20",
                   indicator: colorMap[skill.label] || "bg-gray-500", // 기본 색상 지정 가능
-                  label: "tracking-wider font-medium text-default-600",
-                  value: "text-foreground/60",
+                  label: "tracking-wider font-medium text-white/50",
+                  value: "text-white/60",
                 }}
                 color="warning"
                 label={skill.label}
@@ -107,7 +107,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
               return (
                 <button
                   key={attr.label}
-                  className="border flex py-1 flex-col gap-1 items-center justify-center rounded-xl border-default-200/90 aspect-square hover:bg-default-200/50"
+                  className="border flex py-1 flex-col gap-1 items-center justify-center rounded-xl border-white/20 aspect-square hover:bg-white/10"
                   onClick={() => setSelectedAttribute(attr)}
                 >
                   {IconComponent && <IconComponent height={60} width={60} />}
@@ -116,10 +116,10 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
               );
             })}
           </div>
-          <div className="border border-default-200/90 p-4 rounded-xl flex-1 mt-4">
+          <div className="border border-white/20 p-4 rounded-xl flex-1 mt-4">
             <h4 className="font-bold">{selectedAttribute.label}</h4>
-            <hr className="border-default-200/90 mb-4 -mt-1" />
-            <p className="text-default-500 text-sm">
+            <hr className="border-white/20 mb-4 -mt-1" />
+            <p className="text-white/50 text-sm">
               {selectedAttribute.description}
             </p>
           </div>

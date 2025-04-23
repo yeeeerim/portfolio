@@ -26,17 +26,23 @@ export const Navbar = () => {
 
   return (
     <HeroUINavbar
-      className="text-default-600 relative"
+      className="text-white relative bg-white/10 border-b border-white/20"
       maxWidth="xl"
       position="sticky"
     >
       <NavbarContent className="basis-1/5 sm:basis-full gap-10" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
+        <NavbarBrand as="li" className="gap-3 max-w-7xl">
           {/* <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
             <p className="font-bold text-inherit">JIN YERIM</p>
           </NextLink> */}
-          <Button as="a" href="/" radius="full" variant="bordered">
+          <Button
+            as="a"
+            className="border-white/40 text-white"
+            href="/"
+            radius="full"
+            variant="bordered"
+          >
             {`< Back`}
           </Button>
         </NavbarBrand>
@@ -57,10 +63,14 @@ export const Navbar = () => {
                   isDisabled={!item.active}
                 >
                   {!item.active && (
-                    <LockIcon className="mb-[2px]" height={16} width={16} />
+                    <LockIcon
+                      className="mb-[2px] text-white"
+                      height={16}
+                      width={16}
+                    />
                   )}
                   <span
-                    className="z-20"
+                    className="z-20 text-white"
                     style={{
                       textShadow: active ? "0px 0px 8px #ffe388" : "",
                     }}
@@ -82,12 +92,12 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden items-center sm:flex gap-3">
-          <div className="flex items-center gap-1 border rounded-full px-1 py-1 border-default-300">
+          <div className="flex items-center gap-1 border rounded-full px-1 py-1 border-white/60">
             <CrownIcon className="mb-[2px]" height={18} width={18} />
             <span className="font-bold text-sm">1,990</span>
             <AddCircleIcon height={20} width={20} />
           </div>
-          <div className="flex items-center gap-1 border rounded-full px-1 py-1 border-default-300">
+          <div className="flex items-center gap-1 border rounded-full px-1 py-1 border-white/60">
             <DollarMinimalisticIcon height={18} width={18} />
             <span className="font-bold text-sm">123,456</span>
             <AddCircleIcon height={20} width={20} />
@@ -95,22 +105,21 @@ export const Navbar = () => {
           <Link
             isExternal
             aria-label="Github"
-            className="border-default-300 border rounded-full p-1"
+            className="border-white/60 border rounded-full p-1"
             href={siteConfig.links.github}
           >
-            <GithubIcon className="text-default-500" />
+            <GithubIcon className="text-white" />
           </Link>
           {/* <ThemeSwitch /> */}
         </NavbarItem>
       </NavbarContent>
 
-      <div className="absolute opacity-30 bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#ffe388] to-transparent" />
+      {/* <div className="absolute opacity-30 bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#ffe388] to-transparent" /> */}
 
       {/* <NavbarContent className="sm:hidden basis-1 pl-4" justify="end"> */}
       {/* <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
         </Link> */}
-      {/* <ThemeSwitch /> */}
       {/* <NavbarMenuToggle /> */}
       {/* </NavbarContent> */}
 

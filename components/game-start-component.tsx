@@ -19,7 +19,7 @@ const GameStartComponent = () => {
         setSelectedCharacter={setSelectedCharacter}
       />
       <div
-        className="flex-1 flex items-center justify-center h-full bg-contain bg-center bg-no-repeat"
+        className="flex-1 flex items-center justify-center h-[700px] bg-contain bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${selectedCharacter.image_url})`,
         }}

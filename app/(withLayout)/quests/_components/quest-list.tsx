@@ -23,6 +23,12 @@ const QuestList = ({ allQuests }: QuestListProps) => {
     <Accordion
       className="w-[300px]"
       defaultExpandedKeys={["1", "2"]}
+      itemClasses={{
+        base: "!bg-white/10",
+        title: "!text-white",
+        content: "!text-white",
+        indicator: "!text-white/50",
+      }}
       selectionMode="multiple"
       variant="splitted"
     >
@@ -33,7 +39,7 @@ const QuestList = ({ allQuests }: QuestListProps) => {
         title={
           <div className="flex items-center gap-2">
             <span>진행중인 퀘스트</span>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-white/50">
               ({inProgressQuests.length})
             </span>
           </div>
@@ -43,7 +49,7 @@ const QuestList = ({ allQuests }: QuestListProps) => {
           {inProgressQuests.map((quest) => (
             <div
               key={quest.slug}
-              className="border-t border-default-100 w-full h-fit py-1"
+              className="border-t border-white/10 w-full h-fit py-1"
             >
               <QuestItem isActive={slug === quest.slug} quest={quest} />
             </div>
@@ -67,7 +73,7 @@ const QuestList = ({ allQuests }: QuestListProps) => {
           {completedQuests.map((quest) => (
             <div
               key={quest.slug}
-              className="border-t border-default-100 w-full h-fit py-1"
+              className="border-t border-white/10 w-full h-fit py-1"
             >
               <QuestItem isActive={slug === quest.slug} quest={quest} />
             </div>

@@ -20,9 +20,9 @@ export default async function Post(props: Params) {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <main className="max-w-[960px] mx-auto px-5 mb-20 font-sans">
+    <main className="max-w-[960px] mx-auto px-5 mb-20">
       <BackButton />
-      <article className="mt-5 flex flex-col gap-5 font-sans bg-default-100/50 p-5 rounded-lg">
+      <article className="mt-5 flex flex-col gap-5 font-sans bg-white/5 p-5 text-white">
         <PostHeader
           coverImage={post.coverImage}
           date={post.date}

@@ -1,5 +1,5 @@
 ---
-title: "포트폴리오 사이트"
+title: "포트폴리오 (Gatsby.js)"
 date:
   startAt: "2022. 10. 29"
   endAt: "2024. 05. 29"
@@ -10,7 +10,7 @@ skills:
   - Gatsby.js
   - GraphQL
 contributors: 1
-description: Gatsby 프레임워크를 사용하여 만든 블로그입니다. 소개와 회고, 프로젝트 소개를 담고 있습니다.
+description: Gatsby 프레임워크를 사용하여 만든 포트폴리오 사이트입니다. 소개와 회고, 프로젝트 소개를 담고 있습니다.
 url:
   github: https://github.com/yeeeerim/yeeeerim.github.io
   external: https://yrim.me/

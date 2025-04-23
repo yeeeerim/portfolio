@@ -14,7 +14,7 @@ const CharacterDetail = () => {
   const { level, experience } = result;
 
   return (
-    <div className="h-[600px] w-[400px] px-5 bg-default-100/60 divide-y divide-default-200/60 flex-col flex items-start justify-center">
+    <div className="h-[600px] text-white w-[400px] px-5 bg-black/40 divide-y divide-white/30 flex-col flex items-start justify-center">
       <div className="w-full flex-col p-4 flex">
         <h3 className="text-center font-bold">JIN YERIM</h3>
         <span>Frontend Engineer</span>
@@ -23,7 +23,7 @@ const CharacterDetail = () => {
           <Progress
             classNames={{
               base: "flex-row items-center",
-              track: "flex-1 border border-default-300",
+              track: "flex-1 border border-white/60 bg-white/10",
               indicator: "bg-[#ffd86c7a]",
               label: "text-sm w-[30px]",
             }}
@@ -37,7 +37,7 @@ const CharacterDetail = () => {
           <Progress
             classNames={{
               base: "flex-row items-center",
-              track: "flex-1 border border-default-300",
+              track: "flex-1 border border-white/60 bg-white/10",
               indicator: "bg-[#ff765e7a]",
               label: "text-sm w-[30px]",
             }}
@@ -51,7 +51,7 @@ const CharacterDetail = () => {
           <Progress
             classNames={{
               base: "flex-row items-center",
-              track: "flex-1 border border-default-300",
+              track: "flex-1 border border-white/60 bg-white/10",
               indicator: "bg-[#63bcff7a]",
               label: "text-sm w-[30px]",
             }}
@@ -78,7 +78,7 @@ const CharacterDetail = () => {
         <div className="flex items-center gap-3">
           <Link
             aria-label="GitHub"
-            className="bg-default-100 border border-default-200 rounded-md p-2 w-fit"
+            className="bg-black/20 border border-white/40 rounded-md p-2 w-fit"
             href="https://github.com/yeeeerim"
             target="_blank"
           >
@@ -86,7 +86,7 @@ const CharacterDetail = () => {
           </Link>
           <Link
             aria-label="email"
-            className="bg-default-100 border border-default-200 rounded-md p-2 w-fit"
+            className="bg-black/20 border border-white/40 rounded-md p-2 w-fit"
             href="mailto:yerim609@gmail.com"
             target="_blank"
           >
@@ -94,7 +94,7 @@ const CharacterDetail = () => {
           </Link>
           <Link
             aria-label="blog"
-            className="bg-default-100 border border-default-200 rounded-md p-2 w-fit"
+            className="bg-black/20 border border-white/40 rounded-md p-2 w-fit"
             href="https://velog.io/@yr1m/posts"
             target="_blank"
           >
