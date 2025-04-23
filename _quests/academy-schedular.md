@@ -10,7 +10,6 @@ skills:
   - Google Sheets API
   - Vercel
 contributors: 1
-description: 학원 스케줄러는 학생들의 시간표와 출결 정보를 제공하는 웹사이트입니다.
 url:
   external: https://www.giant-edu.com/
   github: https://github.com/yeeeerim/academy-scheduler

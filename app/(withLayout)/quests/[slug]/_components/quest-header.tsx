@@ -15,7 +15,6 @@ interface QuestHeaderProps {
   title: string;
   skills: string[];
   contributors: number;
-  description: string;
   url: {
     external: string;
     github: string;
@@ -27,7 +26,6 @@ const QuestHeader = ({
   title,
   skills,
   contributors,
-  description,
   url,
 }: QuestHeaderProps) => {
   return (
@@ -36,8 +34,6 @@ const QuestHeader = ({
         {title} <CrossSwordsIcon className="w-5 h-5" />
       </h1>
       <div className="border border-white/20 flex-col p-4 text-sm w-full flex items-start gap-2">
-        <p className="m-0">{description}</p>
-        <hr className="w-full my-2" />
         <span className="flex items-center gap-2">
           <CalendarIcon className="w-4 h-4" />
           <span>

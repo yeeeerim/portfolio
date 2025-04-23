@@ -8,7 +8,6 @@ export type Quest = {
   skills: string[];
   content: string;
   contributors: number;
-  description: string;
   banners: string[];
   url: {
     github: string;

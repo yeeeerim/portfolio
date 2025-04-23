@@ -24,7 +24,6 @@ const QuestDetailPage = async (props: Params) => {
       <QuestHeader
         contributors={quest.contributors}
         date={quest.date}
-        description={quest.description}
         skills={quest.skills}
         title={quest.title}
         url={quest.url}

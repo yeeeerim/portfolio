@@ -12,7 +12,6 @@ skills:
   - Recoil
   - Figma
 contributors: 3
-description: 메이플스토리 게임 내 캐릭터의 스펙 및 효율을 계산해주는 사이트입니다. 넥슨 오픈 API를 통해 사용자의 아이템을 보여주고, 보스 컷을 계산해줍니다.
 url:
   external: https://maplescouter.com
 ---

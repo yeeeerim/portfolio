@@ -9,7 +9,6 @@ skills:
   - Tailwind CSS
   - Recoil
 contributors: 6
-description: 대학 주변의 맛집을 추천해주는 사이트입니다. 음식점을 검색하고 리뷰를 작성할 수 있으며, 학교 및 학과별 게시판을 통해 정보를 공유할 수 있습니다.
 url:
   github: https://github.com/TeamDogeC-2/StudentSoup
 ---

@@ -11,7 +11,6 @@ skills:
   - Recoil
   - React-query
 contributors: 6
-description: 취미 아이템 구매를 위한 결정을 도와주는 서비스입니다.
 url:
   github: https://github.com/uju-in/lime-frontend
 ---
