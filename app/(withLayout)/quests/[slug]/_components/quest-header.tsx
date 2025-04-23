@@ -50,16 +50,27 @@ const QuestHeader = ({
             <code key={skill}>{skill}</code>
           ))}
         </span>
-        {url.external && (
-          <a href={url.external} rel="noopener noreferrer" target="_blank">
-            {url.external}
-          </a>
-        )}
-        {url.github && (
-          <a href={url.github} rel="noopener noreferrer" target="_blank">
-            {url.github}
-          </a>
-        )}
+        <hr className="w-full border-white/20 my-2" />
+        <div className="flex items-center gap-2">
+          <span>Link : </span>{" "}
+          {url.external ? (
+            <a href={url.external} rel="noopener noreferrer" target="_blank">
+              {url.external}
+            </a>
+          ) : (
+            <span className="text-gray-500">(만료됨)</span>
+          )}
+        </div>
+        <div className="flex items-center gap-2">
+          <span>Github : </span>{" "}
+          {url.github ? (
+            <a href={url.github} rel="noopener noreferrer" target="_blank">
+              {url.github}
+            </a>
+          ) : (
+            <span className="text-gray-500">(private)</span>
+          )}
+        </div>
       </div>
     </div>
   );
