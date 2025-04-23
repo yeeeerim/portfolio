@@ -28,7 +28,7 @@ const QuestDetailPage = async (props: Params) => {
         title={quest.title}
         url={quest.url}
       />
-      <QuestBody content={content} />
+      <QuestBody banners={quest.banners} content={content} />
     </>
   );
 };

@@ -14,6 +14,13 @@ skills:
 contributors: 3
 url:
   external: https://maplescouter.com
+banners:
+  - /banners/maplescouter/1.png
+  - /banners/maplescouter/2.png
+  - /banners/maplescouter/3.png
+  - /banners/maplescouter/4.png
+  - /banners/maplescouter/5.png
+  - /banners/maplescouter/6.png
 ---
 
 ## 1. 프로젝트 개요

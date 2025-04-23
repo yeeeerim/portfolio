@@ -13,6 +13,15 @@ contributors: 1
 url:
   external: https://www.giant-edu.com/
   github: https://github.com/yeeeerim/academy-scheduler
+banners:
+  - /banners/academy-scheduler/1.png
+  - /banners/academy-scheduler/2.png
+  - /banners/academy-scheduler/3.png
+  - /banners/academy-scheduler/4.png
+  - /banners/academy-scheduler/5.png
+  - /banners/academy-scheduler/6.png
+  - /banners/academy-scheduler/7.png
+  - /banners/academy-scheduler/8.png
 ---
 
 ## 1. 프로젝트 개요

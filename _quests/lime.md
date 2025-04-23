@@ -13,6 +13,13 @@ skills:
 contributors: 6
 url:
   github: https://github.com/uju-in/lime-frontend
+banners:
+  - /banners/lime/1.png
+  - /banners/lime/2.png
+  - /banners/lime/3.png
+  - /banners/lime/4.png
+  - /banners/lime/5.png
+  - /banners/lime/6.png
 ---
 
 ## 1. 프로젝트 개요
