@@ -4,8 +4,7 @@ import { Progress } from "@heroui/react";
 import React, { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 
-import * as Icons from "./icons";
-
+import * as Icons from "@/components/icons";
 import { Character } from "@/types/character";
 
 type CharacterInfoProps = {

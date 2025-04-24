@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 
-import CharacterInfo from "@/components/character-info";
-import CharacterList from "@/components/character-list";
+import CharacterList from "./character-list";
+import CharacterInfo from "./character-info";
+
 import { characterInfo } from "@/static/character-info";
 import { Character } from "@/types/character";
 
