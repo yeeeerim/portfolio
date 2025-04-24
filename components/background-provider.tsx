@@ -5,20 +5,23 @@ import React from "react";
 
 const BackgroundProvider = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
-  const hasBackground = !pathname.includes("/achievement/");
+  const isDefaultBg = !pathname.includes("/achievement/");
 
   return (
     <div
       className="w-full h-full min-h-screen"
       style={
-        hasBackground
+        isDefaultBg
           ? {
-              background: "url('/images/background-img.png')",
+              background: "url('/images/background-default.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }
-          : {}
+          : {
+              background: "url('/images/background-achievement.png')",
+              backgroundSize: "contain",
+            }
       }
     >
       {children}
