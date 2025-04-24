@@ -8,6 +8,7 @@ import { siteConfig } from "@/config/site";
 import { fontCinzel, fontSans } from "@/config/fonts";
 import RouterProvider from "@/components/router-provider";
 import SplashWrapper from "@/components/splash-wrapper";
+import BackgroundProvider from "@/components/background-provider";
 
 export const metadata: Metadata = {
   title: {
@@ -41,19 +42,15 @@ export default function RootLayout({
           fontCinzel.variable,
           fontSans.variable,
         )}
-        style={{
-          background: "url('/images/background-img.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex-1 flex-grow">
-            <RouterProvider />
-            <SplashWrapper>{children}</SplashWrapper>
-          </div>
-        </Providers>
+        <BackgroundProvider>
+          <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+            <div className="relative flex-1 flex-grow">
+              <RouterProvider />
+              <SplashWrapper>{children}</SplashWrapper>
+            </div>
+          </Providers>
+        </BackgroundProvider>
       </body>
     </html>
   );
