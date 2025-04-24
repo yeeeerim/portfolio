@@ -19,4 +19,8 @@ export type Character = {
     label: string;
     description: string;
   }[];
+  birthday: string;
+  mbti: string;
+  major: string;
+  favoriteSkills: string[];
 };

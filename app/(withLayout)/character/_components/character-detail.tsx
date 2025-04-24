@@ -7,17 +7,20 @@ import Link from "next/link";
 import { calculateDeveloperLevel } from "@/lib/calculateDeveloperLevel";
 import { careerData } from "@/static/career-data";
 import { GithubIcon, LetterIcon, PenIcon } from "@/components/icons";
+import { characterInfo } from "@/static/character-info";
 
 const CharacterDetail = () => {
   // 결과 계산
   const result = calculateDeveloperLevel(careerData);
   const { level, experience } = result;
 
+  const character = characterInfo["진예림"];
+
   return (
     <div className="h-[600px] text-white w-[400px] px-5 bg-black/40 divide-y divide-white/30 flex-col flex items-start justify-center">
       <div className="w-full flex-col p-4 flex">
-        <h3 className="text-center font-bold">JIN YERIM</h3>
-        <span>Frontend Engineer</span>
+        <h3 className="text-center font-bold">{character.name.en}</h3>
+        <span>{character.job}</span>
         <span className="text-2xl font-bold mb-3">{`Level ${level}`}</span>
         <div className="flex items-center w-full gap-3">
           <Progress
@@ -65,13 +68,13 @@ const CharacterDetail = () => {
       <div className="w-full p-4 flex-1 grid grid-cols-2 justify-center">
         {/* Character Feature 1 */}
         <span>Birthday</span>
-        <span>1999.06.09</span>
+        <span>{character.birthday}</span>
         <span>MBTI</span>
-        <span>ISFJ</span>
+        <span>{character.mbti}</span>
         <span>Major</span>
-        <span>Computer Engineering</span>
+        <span>{character.major}</span>
         <span>Favorite Skills</span>
-        <span>TypeScript, React.js, Next.js, Tailwind</span>
+        <span>{character.favoriteSkills.join(", ")}</span>
       </div>
       <div className="w-full p-4 flex-1 ">
         {/* Character Feature 2 */}

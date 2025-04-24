@@ -35,13 +35,7 @@ const RouterProvider = () => {
   useEffect(() => {
     const alertType = getCookie("alert");
 
-    if (alertType === "characterRequired") {
-      onOpenChange(true);
-      setModalContent({
-        title: "접근 제한",
-        body: "캐릭터를 선택해주세요.",
-      });
-    } else if (alertType === "underConstruction") {
+    if (alertType === "underConstruction") {
       onOpenChange(true);
       setModalContent({
         title: "접근 제한",

@@ -56,54 +56,9 @@ export const characterInfo: Record<string, Character> = {
           "프로젝트 진행 전 명확한 기능 정의와 일정 계획을 세우고, 그에 맞춰 체계적으로 작업을 분배합니다. 예상 리스크를 고려해 여유 있는 개발 일정을 짜고, 일정 관리와 우선순위 설정에 능숙합니다.",
       },
     ],
-  },
-  홍길동: {
-    name: {
-      ko: "홍길동",
-      en: "HONG GILDONG",
-    },
-    job: "Backend Engineer",
-    shortJob: "Backend",
-    skills: ["Node.js", "Express", "MongoDB", "GraphQL", "AWS"],
-    level: 1,
-    profile_image_url: "/images/profile_gildong.png",
-    image_url: "/images/img_gildong.png",
-    disabled: true,
-    progress: [
-      {
-        label: "Node.js",
-        value: 80,
-      },
-      {
-        label: "Express",
-        value: 70,
-      },
-      {
-        label: "MongoDB",
-        value: 50,
-      },
-    ],
-    attribute: [
-      {
-        icon: "ShieldIcon",
-        label: "책임감",
-        description: "책임감을 가지고 있습니다.",
-      },
-      {
-        icon: "FireIcon",
-        label: "성실함",
-        description: "성실함을 가지고 있습니다.",
-      },
-      {
-        icon: "GraphIcon",
-        label: "성장지향형",
-        description: "성장지향형을 가지고 있습니다.",
-      },
-      {
-        icon: "PieChartIcon",
-        label: "계획형",
-        description: "계획형을 가지고 있습니다.",
-      },
-    ],
+    birthday: "1999.06.09",
+    mbti: "ISFJ",
+    major: "Computer Engineering",
+    favoriteSkills: ["TypeScript", "React.js", "Next.js", "Tailwind"],
   },
 };
