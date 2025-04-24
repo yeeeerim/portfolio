@@ -9,8 +9,7 @@ import {
 } from "@heroui/navbar";
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
-import { Button } from "@heroui/button";
+import { usePathname, useRouter } from "next/navigation";
 
 import {
   AddCircleIcon,
@@ -23,6 +22,7 @@ import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   return (
     <HeroUINavbar
@@ -36,15 +36,12 @@ export const Navbar = () => {
             <Logo />
             <p className="font-bold text-inherit">JIN YERIM</p>
           </NextLink> */}
-          <Button
-            as="a"
-            className="border-white/40 text-white"
-            href="/"
-            radius="full"
-            variant="bordered"
+          <button
+            className="border-white/30 rounded-full px-3 py-1 border text-white"
+            onClick={() => router.push("/")}
           >
-            {`< Back`}
-          </Button>
+            {`< Home`}
+          </button>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-10 justify-start ml-2">
           {siteConfig.navItems.map((item) => {

@@ -9,6 +9,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        progressBar: "progressBar 3s linear forwards",
+      },
+      keyframes: {
+        progressBar: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
+      },
       fontFamily: {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],

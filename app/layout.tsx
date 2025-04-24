@@ -7,6 +7,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontCinzel, fontSans } from "@/config/fonts";
 import RouterProvider from "@/components/router-provider";
+import SplashWrapper from "@/components/splash-wrapper";
 
 export const metadata: Metadata = {
   title: {
@@ -50,7 +51,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex-1 flex-grow">
             <RouterProvider />
-            {children}
+            <SplashWrapper>{children}</SplashWrapper>
           </div>
         </Providers>
       </body>
