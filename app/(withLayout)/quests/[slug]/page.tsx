@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import QuestHeader from "./_components/quest-header";
 import QuestBody from "./_components/quest-body";
 
-import { getQuestBySlug } from "@/lib/api";
+import { getAllQuests, getQuestBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { siteConfig } from "@/config/site";
 
@@ -57,4 +57,12 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       title,
     },
   };
+}
+
+export async function generateStaticParams() {
+  const quests = getAllQuests();
+
+  return quests.map((quest) => ({
+    slug: quest.slug,
+  }));
 }
