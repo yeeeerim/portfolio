@@ -22,7 +22,7 @@ const CharacterCard = ({
   if (!src)
     return (
       <Card
-        className="border-none bg-white/20 w-[100px] h-[100px]"
+        className="border-none bg-white/10 w-[100px] h-[100px]"
         radius="lg"
       />
     );
