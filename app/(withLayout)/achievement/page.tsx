@@ -8,7 +8,7 @@ const page = () => {
   const allPosts = getAllPosts();
 
   return (
-    <div className="flex flex-wrap gap-5 justify-center">
+    <div className="flex flex-wrap gap-x-5 gap-y-10 justify-center">
       {allPosts.map((post) => (
         <AchievementItem key={post.slug} post={post} />
       ))}
