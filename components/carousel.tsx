@@ -6,10 +6,10 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 interface CarouselProps {
   images: string[];
+  itemsPerPage?: number;
 }
 
-export default function Carousel({ images }: CarouselProps) {
-  const itemsPerPage = 2;
+export default function Carousel({ images, itemsPerPage = 2 }: CarouselProps) {
   const totalPages = Math.ceil(images.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -27,7 +27,12 @@ export default function Carousel({ images }: CarouselProps) {
   return (
     <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
       {/* 이미지 그룹 */}
-      <div className="grid grid-cols-2 gap-4">
+      <div
+        className="grid gap-4"
+        style={{
+          gridTemplateColumns: `repeat(${itemsPerPage}, 1fr)`,
+        }}
+      >
         {getVisibleImages().map((src, idx) => (
           <div
             key={idx}

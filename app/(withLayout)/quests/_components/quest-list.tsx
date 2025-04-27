@@ -21,7 +21,7 @@ const QuestList = ({ allQuests }: QuestListProps) => {
 
   return (
     <Accordion
-      className="w-[300px]"
+      className="md:w-[300px] w-full"
       defaultExpandedKeys={["1", "2"]}
       itemClasses={{
         base: "!bg-white/10",

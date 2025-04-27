@@ -34,37 +34,47 @@ const QuestHeader = ({
         {title} <CrossSwordsIcon className="w-5 h-5" />
       </h1>
       <div className="border border-white/20 flex-col p-4 text-sm w-full flex items-start gap-2">
-        <span className="flex items-center gap-2">
+        <span className="flex items-center gap-2 flex-wrap">
           <CalendarIcon className="w-4 h-4" />
           <span>
             {date.startAt} - {date.endAt ?? "진행중"}
           </span>
         </span>
-        <span className="flex items-center gap-2">
+        <span className="flex items-center gap-2 flex-wrap">
           <UserRoundedIcon className="w-4 h-4" />
           파티원 : {contributors}명
         </span>
-        <span className="flex items-center gap-2">
+        <span className="flex items-center gap-2 flex-wrap">
           <CodeSquareIcon className="w-4 h-4" />
           {skills.map((skill) => (
             <code key={skill}>{skill}</code>
           ))}
         </span>
         <hr className="w-full border-white/20 my-2" />
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 w-full flex-wrap">
           <span>Link : </span>{" "}
           {url.external ? (
-            <a href={url.external} rel="noopener noreferrer" target="_blank">
+            <a
+              className="truncate"
+              href={url.external}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               {url.external}
             </a>
           ) : (
             <span className="text-gray-500">(만료됨)</span>
           )}
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 w-full flex-wrap truncate">
           <span>Github : </span>{" "}
           {url.github ? (
-            <a href={url.github} rel="noopener noreferrer" target="_blank">
+            <a
+              className="truncate"
+              href={url.github}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               {url.github}
             </a>
           ) : (

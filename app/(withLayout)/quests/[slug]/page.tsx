@@ -1,13 +1,13 @@
-import { notFound } from "next/navigation";
-import React from "react";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-import QuestHeader from "./_components/quest-header";
+import QuestBanners from "./_components/quest-banners";
 import QuestBody from "./_components/quest-body";
+import QuestHeader from "./_components/quest-header";
 
+import { siteConfig } from "@/config/site";
 import { getAllQuests, getQuestBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
-import { siteConfig } from "@/config/site";
 
 const QuestDetailPage = async (props: Params) => {
   const params = await props.params;
@@ -28,7 +28,8 @@ const QuestDetailPage = async (props: Params) => {
         title={quest.title}
         url={quest.url}
       />
-      <QuestBody banners={quest.banners} content={content} />
+      <QuestBanners banners={quest.banners} />
+      <QuestBody content={content} />
     </>
   );
 };
