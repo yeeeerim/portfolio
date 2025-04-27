@@ -33,8 +33,8 @@ const CharacterList = ({
   };
 
   return (
-    <div className="flex flex-col justify-between">
-      <div className="flex w-[120px] items-center flex-col gap-4">
+    <div className="flex md:flex-col px-5 justify-between items-end">
+      <div className="flex items-center md:flex-col gap-4">
         {characters.map((character, index) => (
           <CharacterCard
             key={index}

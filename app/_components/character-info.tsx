@@ -44,7 +44,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
   }, [disabled]);
 
   return (
-    <section className="relative w-[500px]">
+    <section className="relative md:w-[500px] w-full">
       {disabled && (
         <div className="absolute flex items-center justify-center top-0 left-0 w-full h-full bg-black/20 z-50">
           <Icons.LockIcon height={60} opacity={0.5} width={60} />
@@ -98,14 +98,14 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
                 <button
                   key={attr.label}
                   className={clsx(
-                    "border flex py-1 flex-col gap-1 items-center justify-center rounded-xl border-white/20 aspect-square hover:bg-white/10",
+                    "border flex py-1 flex-col gap-2 items-center justify-center rounded-xl border-white/20 aspect-square hover:bg-white/10",
                     {
                       "bg-white/5": selectedAttribute.label === attr.label,
                     },
                   )}
                   onClick={() => setSelectedAttribute(attr)}
                 >
-                  {IconComponent && <IconComponent height={60} width={60} />}
+                  {IconComponent && <IconComponent height={50} width={50} />}
                   <span className="text-sm">{attr.label}</span>
                 </button>
               );

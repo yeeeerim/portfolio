@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import clsx from "clsx";
 
 import CharacterList from "./character-list";
 import CharacterInfo from "./character-info";
@@ -14,19 +15,24 @@ const GameStartComponent = () => {
   );
 
   return (
-    <>
+    <div
+      className={clsx(
+        "flex flex-col w-full h-full gap-3",
+        "md:flex-row md:gap-0",
+      )}
+    >
       <CharacterList
         selectedCharacter={selectedCharacter}
         setSelectedCharacter={setSelectedCharacter}
       />
       <div
-        className="flex-1 flex items-center justify-center h-[700px] bg-contain bg-center bg-no-repeat"
+        className="flex-1 flex items-center justify-center h-[700px] w-full bg-contain bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${selectedCharacter.image_url})`,
         }}
       />
       <CharacterInfo character={selectedCharacter} />
-    </>
+    </div>
   );
 };
 
