@@ -11,7 +11,7 @@ const WeaponComponent = () => {
   const [selectedWeapon, setSelectedWeapon] = useState(weaponList[0]);
 
   return (
-    <div className="flex items-start gap-5 flex-col md:flex-row">
+    <div className="flex items-start md:gap-5 flex-col md:flex-row">
       <Weapons selectedWeapon={selectedWeapon} onSelect={setSelectedWeapon} />
       <ItemDetail weaponData={selectedWeapon} />
     </div>
