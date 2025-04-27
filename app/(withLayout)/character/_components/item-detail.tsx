@@ -20,7 +20,7 @@ const ItemDetail = ({ weaponData }: ItemDetailProps) => {
   return (
     <div className="w-[280px] flex h-fit pt-[40px] text-white">
       {/* 삼각형 */}
-      <div className="h-[90px] flex items-center ">
+      <div className="h-[90px] items-center hidden md:flex">
         <div className="w-[20px] h-[30px] -mx-2 -rotate-90 bg-transparent border-t-[15px] border-l-[20px] border-r-[20px] border-transparent border-t-[#ffe38848]" />
       </div>
       {/* 내용 */}

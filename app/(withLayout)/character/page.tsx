@@ -5,7 +5,7 @@ import WeaponComponent from "./_components/weapon-component";
 
 const page = () => {
   return (
-    <div className="h-full items-center flex gap-5">
+    <div className="h-full items-center flex gap-5 flex-col lg:flex-row">
       <WeaponComponent />
       <div
         className="flex-1 flex items-center justify-center bg-cover h-[632px] bg-center bg-no-repeat"
