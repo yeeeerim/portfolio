@@ -6,6 +6,9 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@heroui/navbar";
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
@@ -32,10 +35,6 @@ export const Navbar = () => {
     >
       <NavbarContent className="basis-1/5 sm:basis-full gap-10" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-7xl">
-          {/* <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">JIN YERIM</p>
-          </NextLink> */}
           <button
             className="border-white/30 rounded-full px-3 py-1 border text-white"
             onClick={() => router.push("/")}
@@ -43,6 +42,8 @@ export const Navbar = () => {
             {`< Home`}
           </button>
         </NavbarBrand>
+
+        {/* --- 데스크탑 메뉴 --- */}
         <ul className="hidden lg:flex gap-10 justify-start ml-2">
           {siteConfig.navItems.map((item) => {
             const active = pathname.includes(item.href);
@@ -84,11 +85,12 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
+      {/* --- 코인 & 깃헙 --- */}
       <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
+        className="hidden lg:flex basis-1/5 lg:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden items-center sm:flex gap-3">
+        <NavbarItem className="hidden items-center lg:flex gap-3">
           <div className="flex items-center gap-1 border rounded-full px-1 py-1 border-white/60">
             <CrownIcon className="mb-[2px]" height={18} width={18} />
             <span className="font-bold text-sm">1,990</span>
@@ -111,27 +113,35 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      {/* <div className="absolute opacity-30 bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#ffe388] to-transparent" /> */}
+      {/* --- 모바일 메뉴 --- */}
+      <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
+        <NavbarMenuToggle />
+      </NavbarContent>
 
-      {/* <NavbarContent className="sm:hidden basis-1 pl-4" justify="end"> */}
-      {/* <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link> */}
-      {/* <NavbarMenuToggle /> */}
-      {/* </NavbarContent> */}
-
-      {/* <NavbarMenu>
-        {searchInput}
+      <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link color={index === 2 ? "primary" : index === siteConfig.navMenuItems.length - 1 ? "danger" : "foreground"} href="#" size="lg">
+              <Link
+                className="flex items-center gap-2"
+                color="foreground"
+                href={item.href}
+                isDisabled={!item.active}
+                size="lg"
+              >
                 {item.label}
+                {!item.active && (
+                  <LockIcon
+                    className="mb-[2px] text-white"
+                    height={16}
+                    width={16}
+                  />
+                )}
               </Link>
             </NavbarMenuItem>
           ))}
         </div>
-      </NavbarMenu> */}
+      </NavbarMenu>
     </HeroUINavbar>
   );
 };

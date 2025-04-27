@@ -30,12 +30,33 @@ export const siteConfig = {
       active: false,
     },
   ],
-  // navMenuItems: [
-  //   {
-  //     label: "Logout",
-  //     href: "/logout",
-  //   },
-  // ],
+  navMenuItems: [
+    {
+      label: "CHARACTER",
+      href: "/character",
+      active: true,
+    },
+    {
+      label: "QUESTS",
+      href: "/quests",
+      active: true,
+    },
+    {
+      label: "ACHIEVEMENT",
+      href: "/achievement",
+      active: true,
+    },
+    {
+      label: "STORE",
+      href: "/store",
+      active: false,
+    },
+    {
+      label: "GAME",
+      href: "/game",
+      active: false,
+    },
+  ],
   links: {
     github: "https://github.com/yeeeerim/portfolio",
   },
