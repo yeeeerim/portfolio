@@ -19,6 +19,28 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/my-notion-face-transparent.png",
   },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: "/images/profile_yerim.png",
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: ["/images/profile_yerim.png"],
+  },
 };
 
 export const viewport: Viewport = {

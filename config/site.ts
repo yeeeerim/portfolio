@@ -60,4 +60,5 @@ export const siteConfig = {
   links: {
     github: "https://github.com/yeeeerim/portfolio",
   },
+  url: "https://www.yerimstory.site/",
 };
