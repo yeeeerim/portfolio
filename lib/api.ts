@@ -30,7 +30,6 @@ export function getAllPosts(): Post[] {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
-    // sort posts by date in descending order
     .sort((post1, post2) => (post1.date < post2.date ? -1 : 1));
 
   return posts;
@@ -56,8 +55,7 @@ export function getAllQuests(): Quest[] {
   const slugs = getQuestSlugs();
   const quests = slugs
     .map((slug) => getQuestBySlug(slug))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date < post2.date ? -1 : 1));
+    .sort((post1, post2) => (post1.date.startAt > post2.date.startAt ? -1 : 1));
 
   return quests;
 }
