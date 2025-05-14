@@ -1,5 +1,10 @@
 import { CareerType } from "@/static/career-data";
 
+/**
+ * 개발자 레벨 계산
+ * @param CareerTypes 경력 기간 배열
+ * @returns 레벨과 경험치
+ */
 export function calculateDeveloperLevel(CareerTypes: CareerType[]): {
   level: number;
   experience: number;
