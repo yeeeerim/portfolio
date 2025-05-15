@@ -9,11 +9,6 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
       <main className="flex-1 mt-10 md:mt-20 mb-20 max-w-[100vw] w-[1280px] mx-auto">
         {children}
       </main>
-      {/* <footer className="w-full flex items-center justify-center py-3">
-        <Link isExternal className="flex items-center gap-1 text-current" href="/" title="heroui.com homepage">
-          <span className="text-default-600">JIN YERIM</span>
-        </Link>
-      </footer> */}
     </div>
   );
 };
