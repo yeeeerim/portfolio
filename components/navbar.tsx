@@ -13,6 +13,7 @@ import {
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
 import { usePathname, useRouter } from "next/navigation";
+import { useState } from "react";
 
 import {
   AddCircleIcon,
@@ -26,12 +27,15 @@ import { siteConfig } from "@/config/site";
 export const Navbar = () => {
   const pathname = usePathname();
   const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <HeroUINavbar
       className="text-white relative bg-white/10 border-b border-white/20"
+      isMenuOpen={isOpen}
       maxWidth="xl"
       position="sticky"
+      onMenuOpenChange={setIsOpen}
     >
       <NavbarContent className="basis-1/5 sm:basis-full gap-10" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-7xl">
@@ -59,6 +63,7 @@ export const Navbar = () => {
                   color="foreground"
                   href={item.href}
                   isDisabled={!item.active}
+                  onPress={() => setIsOpen(false)}
                 >
                   {!item.active && (
                     <LockIcon
@@ -128,6 +133,7 @@ export const Navbar = () => {
                 href={item.href}
                 isDisabled={!item.active}
                 size="lg"
+                onPress={() => setIsOpen(false)}
               >
                 {item.label}
                 {!item.active && (
