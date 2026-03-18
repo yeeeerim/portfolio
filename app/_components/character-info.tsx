@@ -70,7 +70,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
         <div className="mt-4">
           <h3 className="border-b border-white/20">Skill</h3>
           <div className="flex flex-col gap-2 w-full">
-            {progress.map((skill, index) => (
+            {progress.map((skill) => (
               <Progress
                 key={skill.label}
                 classNames={{
