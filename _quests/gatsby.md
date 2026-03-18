@@ -12,7 +12,6 @@ skills:
 contributors: 1
 url:
   github: https://github.com/yeeeerim/yeeeerim.github.io
-  external: https://yrim.me/
 banners:
   - /assets/gatsby/banner/1.png
   - /assets/gatsby/banner/2.png

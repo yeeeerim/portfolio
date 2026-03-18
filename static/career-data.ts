@@ -2,7 +2,7 @@ export type CareerType = (typeof careerData)[0];
 
 export const careerData = [
   {
-    company_name: "TOPCO",
+    company_name: "TOPTOON",
     team: "해외서비스개발부",
     position: "Frontend Engineer",
     startAt: "2022-04-01",
@@ -15,4 +15,10 @@ export const careerData = [
     startAt: "2024-07-01",
     endAt: "2025-03-31",
   }, // 9개월
+  {
+    company_name: "KS AUTOPLAN",
+    team: "개발부",
+    position: "Full-Stack Engineer",
+    startAt: "2025-06-02",
+  },
 ];
