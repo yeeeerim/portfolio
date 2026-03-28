@@ -26,7 +26,7 @@ export const weaponList = [
     speed: 80,
     proficiency: 75,
     knowledge: 70,
-    experience: "3 years",
+    experience: "4 years",
   },
   {
     icon: <BowIcon height={48} width={48} />,
@@ -34,7 +34,7 @@ export const weaponList = [
     speed: 85,
     proficiency: 70,
     knowledge: 70,
-    experience: "3 years",
+    experience: "4 years",
   },
   {
     icon: <ThorHammerIcon height={60} width={60} />,
@@ -42,7 +42,7 @@ export const weaponList = [
     speed: 70,
     proficiency: 70,
     knowledge: 65,
-    experience: "3 years",
+    experience: "4 years",
   },
   {
     icon: <FairyWandIcon height={48} width={48} />,
@@ -50,7 +50,7 @@ export const weaponList = [
     speed: 70,
     proficiency: 70,
     knowledge: 65,
-    experience: "2 years",
+    experience: "3 years",
   },
   {
     icon: <GladiusIcon height={60} width={60} />,
@@ -58,7 +58,7 @@ export const weaponList = [
     speed: 70,
     proficiency: 60,
     knowledge: 60,
-    experience: "3 years",
+    experience: "4 years",
   },
   {
     icon: <BatteredAxeIcon height={52} width={52} />,
