@@ -10,7 +10,7 @@ skills:
 contributors: 1
 url:
   github: https://github.com/yeeeerim/portfolio
-  external: https://www.yerimstory.site/
+  external: https://www.yrim.site/
 banners:
   - /assets/portfolio/banner/1.png
   - /assets/portfolio/banner/2.png
