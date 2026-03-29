@@ -14,7 +14,7 @@ const QuestItem = ({ quest, isActive }: QuestItemProps) => {
   return (
     <Link
       className={clsx(
-        "px-3 py-2 flex hover:bg-white/10 rounded-lg gap-2",
+        "px-3 py-2 flex hover:bg-white/10 rounded-lg gap-2 items-center",
         isActive && "bg-white/10",
       )}
       href={`/quests/${quest.slug}`}
