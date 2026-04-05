@@ -9,8 +9,6 @@ skills:
   - Next.js 15
   - Zustand
   - shadcn/ui
-  - Recoil
-  - Figma
 contributors: 3
 url:
   external: https://maplescouter.com
@@ -67,9 +65,8 @@ banners:
 
 #### 4. UI/UX 전면 재설계
 
-- 사용자 흐름(User Flow) 기반 인터페이스 재구성
-- 정보 구조(IA) 개선 및 불필요한 인터랙션 제거
-- shadcn/ui 도입을 통한 디자인 시스템 구축
+- antd → shadcn 기반 디자인 시스템으로 전환
+- 필요한 컴포넌트만 선택적으로 도입하여 번들 사이즈 최적화
 
 #### 5. 테마 시스템 구축 (다크모드)
 
@@ -79,15 +76,8 @@ banners:
 
 #### 6. 상태 관리 구조 개선
 
-- Recoil → Zustand 전면 교체
+- Recoil(지원 중단) → Zustand 전면 교체
 - 전역 상태 최소화 및 도메인 단위 상태 분리
-- 불필요한 리렌더링 감소
-
-#### 7. 코드 구조 및 유지보수성 개선
-
-- 컴포넌트 구조 재정의 (Presentational / Container 분리)
-- 공통 로직 Hook 분리 및 재사용성 강화
-- 타입 안정성 강화 (TypeScript)
 
 ## 4. 기술 스택
 
@@ -109,7 +99,7 @@ banners:
 - 초기 로딩 속도 및 렌더링 성능 개선
 - 사용자 흐름 단순화로 UX 개선
 - SEO 대응 가능 구조 확보
-- 유지보수 가능한 구조로 리팩토링 완료
+- 유지보수 가능한 구조로 리팩토링
 - 확장 가능한 다국어 및 테마 시스템 구축
 
 ## 6. 회고

@@ -7,9 +7,6 @@ skills:
   - TypeScript
   - React.js
   - Tailwind CSS
-  - Next.js 15
-  - Zustand
-  - shadcn/ui
   - Recoil
   - Figma
 contributors: 3
