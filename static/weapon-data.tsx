@@ -47,20 +47,20 @@ export const weaponList = [
     experience: "4 years",
   },
   {
-    icon: <FairyWandIcon height={48} width={48} />,
-    name: "emotion",
-    speed: 70,
-    proficiency: 70,
-    knowledge: 65,
-    experience: "3 years",
-  },
-  {
     icon: <GladiusIcon height={60} width={60} />,
     name: "Next.js",
     speed: 70,
     proficiency: 60,
     knowledge: 60,
     experience: "4 years",
+  },
+  {
+    icon: <FairyWandIcon height={48} width={48} />,
+    name: "emotion",
+    speed: 70,
+    proficiency: 60,
+    knowledge: 55,
+    experience: "3 years",
   },
   {
     icon: <BatteredAxeIcon height={52} width={52} />,
@@ -92,7 +92,7 @@ export const weaponList = [
     speed: 40,
     proficiency: 30,
     knowledge: 25,
-    experience: "10 months",
+    experience: "1 years",
   },
   {
     icon: <RevolverIcon height={60} width={60} />,
