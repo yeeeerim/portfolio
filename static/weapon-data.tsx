@@ -82,9 +82,9 @@ export const weaponList = [
     icon: <BoomerangIcon height={60} width={60} />,
     name: "Redux",
     speed: 50,
-    proficiency: 40,
-    knowledge: 40,
-    experience: "2 years",
+    proficiency: 50,
+    knowledge: 50,
+    experience: "3 years",
   },
   {
     icon: <SlingshotIcon height={60} width={60} />,
@@ -92,7 +92,7 @@ export const weaponList = [
     speed: 40,
     proficiency: 30,
     knowledge: 25,
-    experience: "1 years",
+    experience: "2 years",
   },
   {
     icon: <RevolverIcon height={60} width={60} />,
