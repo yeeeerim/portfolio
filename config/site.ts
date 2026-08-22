@@ -20,13 +20,13 @@ export const siteConfig = {
       active: true,
     },
     {
-      label: "STORE",
-      href: "/store",
-      active: false,
-    },
-    {
       label: "GAME",
       href: "/game",
+      active: true,
+    },
+    {
+      label: "STORE",
+      href: "/store",
       active: false,
     },
   ],
@@ -47,13 +47,13 @@ export const siteConfig = {
       active: true,
     },
     {
-      label: "STORE",
-      href: "/store",
-      active: false,
-    },
-    {
       label: "GAME",
       href: "/game",
+      active: true,
+    },
+    {
+      label: "STORE",
+      href: "/store",
       active: false,
     },
   ],
