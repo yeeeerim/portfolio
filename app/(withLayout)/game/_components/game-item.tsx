@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 import { Link } from "@heroui/link";
+import Image from "next/image";
 
 import { Game } from "@/static/game-data";
 
@@ -9,6 +12,14 @@ interface GameItemProps {
 }
 
 const GameItem = ({ game }: GameItemProps) => {
+  const [thumbnail, setThumbnail] = useState<string>();
+
+  useEffect(() => {
+    fetch(`/api/og-image?url=${encodeURIComponent(game.url)}`)
+      .then((res) => res.json())
+      .then((data) => setThumbnail(data.image));
+  }, [game.url]);
+
   return (
     <Link
       isExternal
@@ -27,8 +38,18 @@ const GameItem = ({ game }: GameItemProps) => {
           "group-hover:border-white/60 group-hover:bg-black/55",
         )}
       >
-        <div className="flex items-center justify-center w-full sm:w-[110px] shrink-0 border-b sm:border-b-0 sm:border-r border-white/20 bg-white/5 p-5">
-          {game.icon}
+        <div className="flex items-center justify-center w-full sm:w-[320px] shrink-0 border-b sm:border-b-0 sm:border-r border-white/20 bg-white/5 p-5">
+          {thumbnail ? (
+            <Image
+              alt={game.title}
+              className="w-full h-full object-cover"
+              height={110}
+              src={thumbnail}
+              width={320}
+            />
+          ) : (
+            <></>
+          )}
         </div>
 
         <div className="flex flex-1 flex-col gap-2 p-4 min-w-0">
@@ -41,7 +62,7 @@ const GameItem = ({ game }: GameItemProps) => {
                 "group-hover:border-[#63bcff]/60 group-hover:text-[#63bcff]",
               )}
             >
-              LAUNCH →
+              START →
             </span>
           </div>
 
