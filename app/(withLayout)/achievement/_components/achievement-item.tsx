@@ -16,7 +16,7 @@ const AchievementItem = ({ post }: AchievementItemProps) => {
     <Link
       key={post.slug}
       className={clsx(
-        "transition-transform border border-white/20 text-white font-bold shadow-card p-3 h-[400px] duration-300 justify-center gap-4 items-center rounded-lg flex w-[200px]",
+        "transition-transform border-3 border-[#5b4658] bg-[#fff9e9] text-[#5b4658] font-bold shadow-[5px_5px_0_rgba(91,70,88,.2)] p-3 h-[400px] duration-300 justify-center gap-4 items-center rounded-sm flex w-[200px]",
         "hover:shadow-card-hover hover:transform hover:translate-y-7",
       )}
       color="foreground"

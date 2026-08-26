@@ -52,7 +52,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
       )}
       <div
         ref={sectionRef}
-        className="relative flex-1 h-full bg-black/30 p-7 text-white flex flex-col gap-2"
+        className="pixel-info relative flex-1 h-full bg-[#fff9e9]/95 p-7 text-[#5b4658] flex flex-col gap-2"
         style={disabled ? { filter: "blur(5px)" } : {}}
       >
         <span className="font-black text-lg">{`LV. ${level}`}</span>
@@ -61,22 +61,22 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
           {skills.map((skill, index) => (
             <li
               key={`${skill}-${index}`}
-              className="rounded-sm text-white/50 px-1 py-[1px] font-semibold bg-white/10"
+              className="rounded-none text-[#6b5b6b] px-2 py-1 font-semibold bg-[#dff7ff] border border-[#8cc8d8]"
             >
               {skill}
             </li>
           ))}
         </ul>
         <div className="mt-4">
-          <h3 className="border-b border-white/20">Skill</h3>
+          <h3 className="border-b-2 border-[#f3b6c5]">Skill</h3>
           <div className="flex flex-col gap-2 w-full">
             {progress.map((skill) => (
               <Progress
                 key={skill.label}
                 classNames={{
                   indicator: colorMap[skill.label] || "bg-gray-500", // 기본 색상 지정 가능
-                  label: "tracking-wider font-medium text-white/50",
-                  value: "text-white/60",
+                  label: "tracking-wider font-bold text-[#6b5b6b]",
+                  value: "text-[#6b5b6b]",
                 }}
                 color="warning"
                 label={skill.label}
@@ -89,7 +89,7 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
           </div>
         </div>
         <div className="mt-4 flex-1 flex flex-col">
-          <h3 className="border-b border-white/20">Attribute</h3>
+          <h3 className="border-b-2 border-[#f3b6c5]">Attribute</h3>
           <div className="grid grid-cols-4 gap-3">
             {attribute.map((attr) => {
               const IconComponent = Icons[attr.icon as keyof typeof Icons];
@@ -98,9 +98,10 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
                 <button
                   key={attr.label}
                   className={clsx(
-                    "border flex py-1 flex-col gap-2 items-center justify-center rounded-xl border-white/20 aspect-square hover:bg-white/10",
+                    "border-2 flex py-1 flex-col gap-2 items-center justify-center rounded-none border-[#8cc8d8] aspect-square hover:bg-[#dff7ff]",
                     {
-                      "bg-white/5": selectedAttribute.label === attr.label,
+                      "bg-[#dff7ff] shadow-[3px_3px_0_#8cc8d8]":
+                        selectedAttribute.label === attr.label,
                     },
                   )}
                   onClick={() => setSelectedAttribute(attr)}
@@ -111,10 +112,10 @@ const CharacterInfo = ({ character }: CharacterInfoProps) => {
               );
             })}
           </div>
-          <div className="border border-white/20 bg-white/5 p-4 rounded-xl flex-1 mt-4">
+          <div className="border-2 border-[#8cc8d8] bg-[#f4fcff] p-4 rounded-none flex-1 mt-4 shadow-[4px_4px_0_#c9eaf2]">
             <h4 className="font-bold">{selectedAttribute.label}</h4>
-            <hr className="border-white/20 mb-4 -mt-1" />
-            <p className="text-white text-sm leading-6">
+            <hr className="border-[#8cc8d8] mb-4 -mt-1" />
+            <p className="text-[#5b4658] text-sm leading-6">
               {selectedAttribute.description}
             </p>
           </div>

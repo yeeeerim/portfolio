@@ -61,13 +61,19 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen font-cinzel antialiased",
+          "min-h-screen font-sans antialiased text-[#5b4658]",
           fontCinzel.variable,
           fontSans.variable,
         )}
       >
         <BackgroundProvider>
-          <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+          <Providers
+            themeProps={{
+              attribute: "class",
+              defaultTheme: "light",
+              forcedTheme: "light",
+            }}
+          >
             <div className="relative flex-1 flex-grow">
               <RouterProvider />
               <SplashWrapper>{children}</SplashWrapper>

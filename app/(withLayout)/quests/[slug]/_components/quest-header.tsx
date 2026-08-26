@@ -29,11 +29,11 @@ const QuestHeader = ({
   url,
 }: QuestHeaderProps) => {
   return (
-    <div className="flex flex-col gap-2 text-white">
+    <div className="flex flex-col gap-2 text-[#5b4658]">
       <h1 className="text-2xl flex items-center gap-2 font-bold">
         {title} <CrossSwordsIcon className="w-5 h-5" />
       </h1>
-      <div className="border border-white/20 flex-col p-4 text-sm w-full flex items-start gap-2">
+      <div className="border-2 border-[#8cc8d8] bg-[#dff7ff]/60 flex-col p-4 text-sm w-full flex items-start gap-2">
         <span className="flex items-center gap-2 flex-wrap">
           <CalendarIcon className="w-4 h-4" />
           <span>
@@ -50,7 +50,7 @@ const QuestHeader = ({
             <code key={skill}>{skill}</code>
           ))}
         </span>
-        <hr className="w-full border-white/20 my-2" />
+        <hr className="w-full border-[#8cc8d8] my-2" />
         <div className="flex items-center gap-2 w-full flex-wrap">
           <span>Link : </span>{" "}
           {url.external ? (

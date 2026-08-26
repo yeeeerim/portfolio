@@ -2,6 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ink: #5b4658;
+  --cream: #fff9e9;
+  --pink: #ff9eb5;
+  --mint: #83dfc5;
+  --sky: #bdeeff;
+}
+
+* { box-sizing: border-box; }
+
+body { background: #dff7ff; }
+
+.pixel-world {
+  position: relative;
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(180deg, transparent 0 70%, rgba(105, 199, 137, .18) 70%),
+    radial-gradient(circle at 8% 16%, #fff 0 5px, transparent 6px),
+    radial-gradient(circle at 11% 16%, #fff 0 8px, transparent 9px),
+    radial-gradient(circle at 85% 12%, #fff 0 7px, transparent 8px),
+    linear-gradient(180deg, #bdeeff 0%, #e9fbff 68%, #b8e99b 68%, #83cf88 100%);
+}
+
+.pixel-world::before,
+.pixel-world::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pixel-world::before {
+  width: 180px; height: 100px; right: 4%; bottom: 13%;
+  background: #ffe0a8;
+  clip-path: polygon(0 55%, 12% 55%, 12% 30%, 25% 30%, 25% 10%, 78% 10%, 78% 31%, 90% 31%, 90% 100%, 0 100%);
+  box-shadow: 8px 8px 0 rgba(91,70,88,.16);
+}
+
+.pixel-world::after {
+  width: 110px; height: 140px; left: 3%; bottom: 7%;
+  background: #73c985;
+  clip-path: polygon(42% 0, 58% 0, 58% 18%, 80% 18%, 80% 38%, 100% 38%, 100% 62%, 65% 62%, 65% 100%, 35% 100%, 35% 62%, 0 62%, 0 38%, 20% 38%, 20% 18%, 42% 18%);
+}
+
+.pixel-world > * { position: relative; z-index: 1; }
+
+.pixel-panel,
+.pixel-info {
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 rgba(91,70,88,.24), inset 0 0 0 3px #fff;
+  border-radius: 2px;
+}
+
+.pixel-panel { background: rgba(255,249,233,.82); backdrop-filter: blur(6px); }
+
+.character-stage {
+  image-rendering: pixelated;
+  filter: drop-shadow(8px 10px 0 rgba(91,70,88,.18));
+  background-size: contain !important;
+}
+
+.pixel-card { box-shadow: 4px 4px 0 rgba(91,70,88,.25); image-rendering: pixelated; }
+.pixel-card img { image-rendering: pixelated; }
+.pixel-button { border-radius: 2px !important; box-shadow: 4px 4px 0 var(--ink); }
+.pixel-button:active { transform: translate(3px,3px); box-shadow: 1px 1px 0 var(--ink); }
+
+svg { color: var(--ink); }
+
 html {
   &.light {
     cursor:
@@ -93,6 +161,11 @@ h6 {
 
 /* article 내부 요소 */
 article {
+  color: var(--ink);
+  background: rgba(255,249,233,.9);
+  border: 3px solid var(--ink);
+  box-shadow: 6px 6px 0 rgba(91,70,88,.2);
+  padding: clamp(1rem, 3vw, 2rem);
   line-height: 1.75rem;
 
   blockquote {

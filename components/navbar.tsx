@@ -31,7 +31,7 @@ export const Navbar = () => {
 
   return (
     <HeroUINavbar
-      className="text-white relative bg-white/10 border-b border-white/20"
+      className="text-[#5b4658] relative bg-[#fff9e9]/95 border-b-3 border-[#5b4658] shadow-[0_4px_0_rgba(91,70,88,.16)]"
       isMenuOpen={isOpen}
       maxWidth="xl"
       position="sticky"
@@ -40,7 +40,7 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full gap-10" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-7xl">
           <button
-            className="border-white/30 rounded-full px-3 py-1 border text-white"
+            className="border-[#5b4658] rounded-none px-3 py-1 border-2 text-[#5b4658] bg-[#ffe36e] shadow-[3px_3px_0_#5b4658]"
             onClick={() => router.push("/")}
           >
             {`< Home`}
@@ -67,13 +67,13 @@ export const Navbar = () => {
                 >
                   {!item.active && (
                     <LockIcon
-                      className="mb-[2px] text-white"
+                      className="mb-[2px] text-[#5b4658]"
                       height={16}
                       width={16}
                     />
                   )}
                   <span
-                    className="z-20 text-white"
+                    className="z-20 text-[#5b4658]"
                     style={{
                       textShadow: active ? "0px 0px 8px #ffe388" : "",
                     }}
@@ -97,7 +97,11 @@ export const Navbar = () => {
       >
         <NavbarItem className="hidden items-center lg:flex gap-3">
           <div className="flex items-center gap-1 border rounded-full px-1 py-1 border-white/60">
-            <CrownIcon className="mb-[2px]" height={18} width={18} />
+            <CrownIcon
+              className="mb-[2px] text-[#5b4658]"
+              height={18}
+              width={18}
+            />
             <span className="font-bold text-sm">1,990</span>
             <AddCircleIcon height={20} width={20} />
           </div>

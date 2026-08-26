@@ -9,18 +9,14 @@ const BackgroundProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div
-      className="w-full h-full min-h-screen"
+      className="pixel-world w-full h-full min-h-screen"
       style={
         isDefaultBg
           ? {
-              background: "url('/images/background-default.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
+              backgroundColor: "#dff7ff",
             }
           : {
-              background: "url('/images/background-achievement.png')",
-              backgroundSize: "contain",
+              backgroundColor: "#fff2c7",
             }
       }
     >

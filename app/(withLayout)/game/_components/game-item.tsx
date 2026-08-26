@@ -43,19 +43,19 @@ const GameItem = ({ game }: GameItemProps) => {
       isExternal
       aria-label={`${game.title} 게임 시작하기 (새 창)`}
       className={clsx(
-        "group relative block w-full overflow-hidden rounded-2xl",
-        "border border-white/15 bg-[#07111d]/80 text-white shadow-[0_22px_55px_rgba(0,0,0,0.3)]",
+        "group relative block w-full overflow-hidden rounded-sm",
+        "border-3 border-[#5b4658] bg-[#fff9e9] text-[#5b4658] shadow-[6px_6px_0_rgba(91,70,88,.22)]",
         "backdrop-blur-md transition-all duration-300 ease-out",
-        "hover:-translate-y-1 hover:border-[#63bcff]/55 hover:shadow-[0_26px_70px_rgba(9,98,168,0.22)]",
+        "hover:-translate-y-1 hover:border-[#ff8fa3] hover:shadow-[8px_8px_0_rgba(91,70,88,.22)]",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#63bcff] focus-visible:ring-offset-4 focus-visible:ring-offset-transparent",
       )}
       color="foreground"
       href={game.url}
     >
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#63bcff]/10 via-transparent to-[#8b5cf6]/10 opacity-50 transition-opacity duration-300 group-hover:opacity-100" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#bdeeff]/30 via-transparent to-[#ffb7c7]/30 opacity-50 transition-opacity duration-300 group-hover:opacity-100" />
 
       <article className="relative flex h-full flex-col">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#050b12]">
+        <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#dff7ff] border-b-2 border-[#5b4658]">
           <div
             className={clsx(
               "absolute inset-0 animate-pulse bg-gradient-to-br from-white/10 via-white/5 to-transparent",
@@ -82,12 +82,12 @@ const GameItem = ({ game }: GameItemProps) => {
 
           {!thumbnail && !isImageLoading && (
             <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(circle_at_center,rgba(99,188,255,0.16),transparent_65%)]">
-              <PlayIcon className="h-10 w-10 text-white/25" />
+              <PlayIcon className="h-10 w-10 text-[#8cc8d8]" />
             </div>
           )}
 
-          <div className="absolute inset-0 bg-gradient-to-t from-[#07111d]/70 via-transparent to-transparent" />
-          <span className="absolute left-3 top-3 flex items-center gap-1.5 rounded-full border border-emerald-300/20 bg-black/55 px-2 py-1 text-[9px] font-semibold tracking-[0.14em] text-emerald-200 backdrop-blur-md">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#fff9e9]/50 via-transparent to-transparent" />
+          <span className="absolute left-3 top-3 flex items-center gap-1.5 rounded-sm border-2 border-[#5b4658] bg-[#fff9e9]/90 px-2 py-1 text-[9px] font-bold tracking-[0.14em] text-[#4d8a72]">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-300 shadow-[0_0_10px_#6ee7b7]" />
             PLAYABLE
           </span>
@@ -99,17 +99,17 @@ const GameItem = ({ game }: GameItemProps) => {
               <p className="mb-1.5 text-[9px] font-semibold tracking-[0.24em] text-[#63bcff]">
                 WEB GAME
               </p>
-              <h3 className="mb-0 truncate text-lg font-bold tracking-tight text-white">
+              <h3 className="mb-0 truncate text-lg font-bold tracking-tight text-[#5b4658]">
                 {game.title}
               </h3>
             </div>
-            <span className="flex shrink-0 items-center gap-1.5 rounded-full bg-[#63bcff] px-3 py-1.5 text-[10px] font-bold text-[#04101b] shadow-[0_0_20px_rgba(99,188,255,0.18)] transition-all duration-300 group-hover:bg-white group-hover:shadow-[0_0_28px_rgba(99,188,255,0.38)]">
+            <span className="flex shrink-0 items-center gap-1.5 rounded-sm border-2 border-[#5b4658] bg-[#ffe36e] px-3 py-1.5 text-[10px] font-bold text-[#5b4658] shadow-[3px_3px_0_#5b4658] transition-all duration-300 group-hover:bg-[#ffb7c7]">
               <PlayIcon className="h-3 w-3" />
               게임 시작
             </span>
           </div>
 
-          <p className="mt-3 text-xs leading-5 text-white/60">
+          <p className="mt-3 text-xs leading-5 text-[#6b5b6b]">
             {game.description}
           </p>
         </div>

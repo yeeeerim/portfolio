@@ -12,26 +12,26 @@ interface WeaponItemProps {
 const WeaponItem = ({ item, onSelect, active = false }: WeaponItemProps) => {
   if (!item)
     return (
-      <div className="border w-[90px] aspect-square border-white/20 bg-black/5" />
+      <div className="border-2 w-[90px] aspect-square border-[#9acbd5] bg-[#fff9e9]" />
     );
 
   return (
     <button
       className={clsx(
-        "relative border flex items-center duration-200 justify-center w-[90px] aspect-square border-white/60 bg-black/5",
+        "relative border-2 flex items-center duration-200 justify-center w-[90px] aspect-square border-[#5b4658] bg-[#fff9e9] shadow-[4px_4px_0_rgba(91,70,88,.2)]",
         {
           "hover:w-[86px] hover:ml-[2px] hover:mt-[2px]": !active,
         },
         {
-          "w-[86px] bg-white/10 animate-pulse border-yellow-200/60": active,
+          "w-[86px] bg-[#fff1a8] border-[#ff8fa3]": active,
         },
       )}
       onClick={() => onSelect(item)}
     >
-      <span className="absolute text-tiny font-semibold text-yellow-200 top-1 left-1">
+      <span className="absolute text-tiny font-black text-[#ff6f91] top-1 left-1">
         {item.speed + item.proficiency + item.knowledge}
       </span>
-      <span className="absolute text-tiny font-semibold text-yellow-200 bottom-0 right-1">
+      <span className="absolute text-tiny font-black text-[#5b4658] bottom-0 right-1">
         {item.name}
       </span>
       {item.icon}

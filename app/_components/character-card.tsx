@@ -32,9 +32,9 @@ const CharacterCard = ({
       <Card
         isFooterBlurred
         className={clsx(
-          "text-white/80 w-[100px] h-[100px] bg-white/10 relative",
+          "pixel-card text-[#5b4658] w-[100px] h-[100px] bg-[#fff9e9] relative rounded-none",
           {
-            "border-2 p-1 border-white/50 rounded-2xl": active,
+            "border-4 p-1 border-[#ff8fa3] rounded-none -translate-y-1": active,
             "border-none": !active,
           },
         )}
@@ -47,7 +47,7 @@ const CharacterCard = ({
         />
         <div
           className={clsx(
-            "rounded-2xl absolute font-bold bg-black/50 z-10 px-2 py-1 text-[12px]",
+            "rounded-none absolute font-black bg-[#83dfc5] text-[#405b57] z-10 px-2 py-1 text-[12px] border border-[#5b4658]",
             {
               "right-2 top-2": active,
               "right-1 top-1": !active,
@@ -58,7 +58,7 @@ const CharacterCard = ({
         </div>
         <CardFooter
           className={clsx(
-            "justify-start before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large shadow-small ml-1 z-10",
+            "justify-start bg-[#fff9e9]/90 border-[#5b4658] border-1 overflow-hidden py-1 absolute rounded-none shadow-none ml-1 z-10",
             {
               "w-[calc(100%_-_16px)] bottom-2": active,
               "w-[calc(100%_-_8px)] bottom-1": !active,

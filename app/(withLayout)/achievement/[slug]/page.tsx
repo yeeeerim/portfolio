@@ -22,7 +22,7 @@ export default async function Post(props: Params) {
   return (
     <main className="max-w-[960px] mx-auto px-5 mb-20">
       <BackButton />
-      <article className="mt-5 flex flex-col gap-5 font-sans bg-white/5 p-5 text-white">
+      <article className="mt-5 flex flex-col gap-5 font-sans bg-[#fff9e9]/90 p-5 text-[#5b4658]">
         <PostHeader
           coverImage={post.coverImage}
           date={post.date}

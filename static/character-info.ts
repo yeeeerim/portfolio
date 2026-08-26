@@ -13,8 +13,8 @@ export const characterInfo: Record<string, Character> = {
     shortJob: "Frontend",
     skills: ["React", "Next.js", "Vue.js", "Typescript", "Tailwind"],
     level: calculateDeveloperLevel(careerData).level,
-    profile_image_url: "/images/profile_yerim.png",
-    image_url: "/images/img_yerim.png",
+    profile_image_url: "/images/character-pixel-yerim.png",
+    image_url: "/images/character-pixel-yerim.png",
     disabled: false,
     progress: [
       {

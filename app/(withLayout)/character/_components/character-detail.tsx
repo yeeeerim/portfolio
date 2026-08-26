@@ -17,7 +17,7 @@ const CharacterDetail = () => {
   const character = characterInfo["진예림"];
 
   return (
-    <div className="h-[600px] text-white w-[400px] px-5 bg-black/40 divide-y divide-white/30 flex-col flex items-start justify-center">
+    <div className="h-[600px] text-[#5b4658] w-[400px] px-5 bg-[#fff9e9] border-3 border-[#5b4658] shadow-[6px_6px_0_rgba(91,70,88,.2)] divide-y divide-[#f3b6c5] flex-col flex items-start justify-center">
       <div className="w-full flex-col p-4 flex">
         <h3 className="text-center font-bold">{character.name.en}</h3>
         <span>{character.job}</span>
@@ -26,7 +26,7 @@ const CharacterDetail = () => {
           <Progress
             classNames={{
               base: "flex-row items-center",
-              track: "flex-1 border border-white/60 bg-white/10",
+              track: "flex-1 border border-[#8cc8d8] bg-[#dff7ff]",
               indicator: "bg-[#ffd86c7a]",
               label: "text-sm w-[30px]",
             }}
@@ -40,7 +40,7 @@ const CharacterDetail = () => {
           <Progress
             classNames={{
               base: "flex-row items-center",
-              track: "flex-1 border border-white/60 bg-white/10",
+              track: "flex-1 border border-[#f3b6c5] bg-[#ffe5eb]",
               indicator: "bg-[#ff765e7a]",
               label: "text-sm w-[30px]",
             }}
@@ -54,7 +54,7 @@ const CharacterDetail = () => {
           <Progress
             classNames={{
               base: "flex-row items-center",
-              track: "flex-1 border border-white/60 bg-white/10",
+              track: "flex-1 border border-[#8cc8d8] bg-[#dff7ff]",
               indicator: "bg-[#63bcff7a]",
               label: "text-sm w-[30px]",
             }}
@@ -81,7 +81,7 @@ const CharacterDetail = () => {
         <div className="flex items-center gap-3">
           <Link
             aria-label="GitHub"
-            className="bg-black/20 border border-white/40 rounded-md p-2 w-fit"
+            className="bg-[#dff7ff] border-2 border-[#5b4658] rounded-sm p-2 w-fit"
             href="https://github.com/yeeeerim"
             target="_blank"
           >
@@ -89,7 +89,7 @@ const CharacterDetail = () => {
           </Link>
           <Link
             aria-label="email"
-            className="bg-black/20 border border-white/40 rounded-md p-2 w-fit"
+            className="bg-[#ffe5eb] border-2 border-[#5b4658] rounded-sm p-2 w-fit"
             href="mailto:yerim609@gmail.com"
             target="_blank"
           >
@@ -97,7 +97,7 @@ const CharacterDetail = () => {
           </Link>
           <Link
             aria-label="blog"
-            className="bg-black/20 border border-white/40 rounded-md p-2 w-fit"
+            className="bg-[#fff3bd] border-2 border-[#5b4658] rounded-sm p-2 w-fit"
             href="https://velog.io/@yr1m/posts"
             target="_blank"
           >

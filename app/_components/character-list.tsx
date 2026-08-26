@@ -33,7 +33,7 @@ const CharacterList = ({
   };
 
   return (
-    <div className="flex md:flex-col px-5 justify-between items-end">
+    <div className="flex md:flex-col gap-4 justify-between items-center">
       <div className="flex items-center md:flex-col gap-4">
         {characters.map((character, index) => (
           <CharacterCard
@@ -50,12 +50,12 @@ const CharacterList = ({
         <CharacterCard />
       </div>
       <Button
-        className="font-bold text-medium"
+        className="pixel-button font-black text-medium w-full text-[#5b4658] bg-[#ffe36e] border-2 border-[#5b4658]"
         color="success"
         isDisabled={selectedCharacter.disabled}
         onPress={handleStartClick}
       >
-        START
+        모험 시작! ✦
       </Button>
     </div>
   );

@@ -24,10 +24,10 @@ const QuestList = ({ allQuests }: QuestListProps) => {
       className="md:w-[300px] w-full"
       defaultExpandedKeys={["1", "2"]}
       itemClasses={{
-        base: "!bg-white/10",
-        title: "!text-white",
-        content: "!text-white",
-        indicator: "!text-white/50",
+        base: "!bg-[#fff9e9] !border-2 !border-[#5b4658] !rounded-sm !shadow-[4px_4px_0_rgba(91,70,88,.18)]",
+        title: "!text-[#5b4658] !font-bold",
+        content: "!text-[#5b4658]",
+        indicator: "!text-[#5b4658]",
       }}
       selectionMode="multiple"
       variant="splitted"
@@ -39,7 +39,7 @@ const QuestList = ({ allQuests }: QuestListProps) => {
         title={
           <div className="flex items-center gap-2">
             <span>진행중인 퀘스트</span>
-            <span className="text-sm text-white/50">
+            <span className="text-sm text-[#8d7488]">
               ({inProgressQuests.length})
             </span>
           </div>
@@ -49,7 +49,7 @@ const QuestList = ({ allQuests }: QuestListProps) => {
           {inProgressQuests.map((quest) => (
             <div
               key={quest.slug}
-              className="border-t border-white/10 w-full h-fit py-1"
+              className="border-t border-[#ead8d0] w-full h-fit py-1"
             >
               <QuestItem isActive={slug === quest.slug} quest={quest} />
             </div>
@@ -73,7 +73,7 @@ const QuestList = ({ allQuests }: QuestListProps) => {
           {completedQuests.map((quest) => (
             <div
               key={quest.slug}
-              className="border-t border-white/10 w-full h-fit py-1"
+              className="border-t border-[#ead8d0] w-full h-fit py-1"
             >
               <QuestItem isActive={slug === quest.slug} quest={quest} />
             </div>
